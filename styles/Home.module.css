@@ -126,4 +126,11 @@
   .logo img {
     filter: invert(1);
   }
+  .tempHeader {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 60px;
+    margin-bottom: 30px;
+  }
 }
