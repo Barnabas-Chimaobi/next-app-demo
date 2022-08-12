@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="/CSS/IlaroStyles.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg justify-content-between">
+        <a class="navbar-brand" href="#">
+            <img src="ilaro-logo.jpeg" style="height: 50px; width: 50px; padding: 5px; margin-left: 30px;" class="rounded" />
+        </a>
+        <div class="">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+            <div class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item"><a class="nav-link text-white" href="#">Home</a></li> 
+                    <li class="nav-item dropdown"><a class="nav-link dropdown-toggle text-white" href="#">Applicant</a></li> 
+                     <div class="dropdown"> 
+                         <li class="nav-item "><a class="nav-link dropdown-toggle text-white" href="#">Returning Student</a> 
+                             <div class="dropdown-menu">
+                            <a href="" class="dropdown-item">..</a>
+                            <a href="" class="dropdown-item">..</a>
+                            
+                        </div> 
+    
+                         </li>
+                     </div>
+                <li class="nav-item"><a class="nav-link dropdown-toggle text-white" href="#">Graduate</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="#">Complaints</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="#">User Guide</a></li>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+    </header>
+
+    <h3 class="container mt-3 mb-3">Application Form Invoice</h3>
+    <div class="container d-block d-lg-flex">
+      <div class="card card-padding col-lg-8 col-sm-12 mr-2">
+        <h4 class="pl-3">PROGRAM DETAILS</h4>
+        <div class="d-block d-lg-flex">
+          <form>
+            <div class="ml-2 form-row">
+              <div class="form-group col-md-6 col-sm-12">
+                <label for="inputProgramme">Programme</label>
+                <select id="inputProgramme" class="form-control bg-light">
+                  <option value="">SELECT A PROGRAMME</option>
+                  <option value=""></option>
+                </select>
+              </div>
+
+              <div class="form-group col-md-6 col-sm-12">
+                <label for="inputProgramme">Course</label>
+                <select id="inputProgramme" class="form-control bg-light">
+                  <option value="">SELECT A COURSE</option>
+                  <option value=""></option>
+                </select>
+              </div>
+            </div>
+            <div class="ml-2 form-row">
+              <div class="form-group col-md-6 col-sm-12">
+                <label for="inputJamb">JAMB Reg No.</label>
+                <input type="text" class="form-control bg-light" id="inputJamb">
+        
+              </div>
+
+              <div class="form-group col-md-6 col-sm-12">
+                <label for="inputCourse">Course Option</label>
+                <input type="text" class="form-control bg-light" id="inputCourse">
+              </div>
+            </div>
+          </form>
+
+          <!-- FIVE THOUSAND CARD -->
+          <div class="card col-lg-4 col-sm-12 ml-lg-5 bg-success text-light card-padding">
+            <p class="pb-1">fee for selected programme</p>
+            <h4 class="text-yellow">N5,000.00</h4>
+            <div class="card bg-dark p-4 mt-3">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, sunt
+              harum illo explicabo et maxime consequatur praesentium odit
+              deleniti dolorum dolore laudantium ut laborum culpa, officiis
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- NEW STUDENT APPLICATION BEGINNING -->
+
+      <div class="card col-md-4 bg-success card-padding"></div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,36 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+.card-padding {
+  padding: 16px 10px;
+}
+
+.roow {
+  display: flex;
+}
+
+.text-yellow {
+  color: yellow;
+}
+
+.card-padding p {
+  font-weight: 200;
+}
