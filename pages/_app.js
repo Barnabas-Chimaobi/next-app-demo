@@ -1,12 +1,3 @@
-// import '../styles/globals.css'
-// // import 'https://fonts.cdn.com/css/gilroy-bold'
-
-// function MyApp({ Component, pageProps }) {
-//   return <Component {...pageProps} />
-// }
-
-// export default MyApp
-
 import Head from "next/head"
 import Script from "next/script"
 import { Navbar } from "../components/nav"
