@@ -1,6 +1,33 @@
-import React from 'react'
+import React, {useState} from 'react'
 
 export default function index() {
+const [show, setShow] = useState('personDetails')
+
+  const toggleTabs = (key) => {
+      switch (key) {
+          case 'personDetails':
+              setShow(key)
+              break;
+          case 'education':
+              setShow(key)
+              break;
+          case 'olevel':
+              setShow(key)
+              break;
+          case 'waec':
+              setShow(key)
+              break;
+          case 'country':
+              setShow(key)
+              break;
+          case 'region':
+              setShow(key)
+              break;
+          default:
+              break;
+      }
+  }
+
   return (
  <div>
     <div className="d-block d-lg-flex container mt-3 mb-3">

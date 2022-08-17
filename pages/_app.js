@@ -1,6 +1,10 @@
 import Head from "next/head"
 import Script from "next/script"
 import { Navbar } from "../components/nav"
+import { ApolloClient, ApolloLink, InMemoryCache, HttpLink, ApolloProvider } from "@apollo/client";
+import { client } from "../api";
+// import { RestLink } from "apollo-link-rest";
+
 function MyApp({ Component, pageProps }) {
   return (
     <>
@@ -26,8 +30,10 @@ function MyApp({ Component, pageProps }) {
      <link rel="preconnect" href=" http://fonts.cdnfonts.com/css/gilroy-bold"
       />
   </Head>
-    <Navbar/>
-        <Component {...pageProps} />
+    <ApolloProvider client={client}>
+      <Navbar/>
+      <Component {...pageProps} />
+    </ApolloProvider>
          {/* FOOTER */}
   {/* <footer className="footer py-5">
     <div className="container">
