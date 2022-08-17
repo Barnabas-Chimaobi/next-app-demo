@@ -65,7 +65,7 @@ header{
     color: var(--DarkGreen);
 }
 .lightGrey{
-    background-color: var(--LightGrey); !important;
+    background-color: var(--LightGrey) !important;
 }
 .darkGrey{
     background-color: var(--DarkGrey);
@@ -131,4 +131,7 @@ header{
 }
 .fadedGrey{
     color: var(--fadedGrey);
+}
+.white{
+    color: var(--White);
 }

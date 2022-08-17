@@ -3,6 +3,7 @@ import Script from "next/script"
 import { Navbar } from "../components/nav"
 import { ApolloClient, ApolloLink, InMemoryCache, HttpLink, ApolloProvider } from "@apollo/client";
 import { client } from "../api";
+import Frontlayout from '../Layouts/FrontLayout/frontlayout'
 // import { RestLink } from "apollo-link-rest";
 
 function MyApp({ Component, pageProps }) {
@@ -29,15 +30,22 @@ function MyApp({ Component, pageProps }) {
     />
      <link rel="preconnect" href=" http://fonts.cdnfonts.com/css/gilroy-bold"
       />
+    <script src="https://kit.fontawesome.com/18846ba9d4.js" crossorigin="anonymous"></script>  
   </Head>
+    {/* <Navbar/> */}
     <ApolloProvider client={client}>
-      <Navbar/>
-      <Component {...pageProps} />
+     <Frontlayout>
+      <Component {...pageProps}  />
+     </Frontlayout>
     </ApolloProvider>
+        {/* <main>
+          {children}
+        </main> */}
          {/* FOOTER */}
   {/* <footer className="footer py-5">
     <div className="container">
       <div className="row">
+      give me a sec
         <div className="col-lg-12 col-12">
           <p className="copyright-text text-center">
             Copyright © 2019 Company Name . All rights reserved
