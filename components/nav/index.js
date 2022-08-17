@@ -7,10 +7,11 @@ const Navbar = () => {
       <nav className="navbar navbar-expand-lg justify-content-between">
         <a className="navbar-brand" href="#">
           <img
-            src="ilaro-logo.jpeg"
+            src={"../../ilaro-logo.jpeg"}
             style={{ height: 50, width: 50, padding: 5, marginLeft: 30 }}
             className="rounded"
           />
+          
         </a>
         <div className="">
           <button

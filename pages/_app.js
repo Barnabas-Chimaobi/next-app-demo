@@ -1,6 +1,9 @@
 import Head from "next/head"
 import Script from "next/script"
 import { Navbar } from "../components/nav"
+import Frontlayout from "../Layouts/FrontLayout/frontlayout"
+import "../public/css/ilaroStyles.css"
+import "../public/css/index.css"
 function MyApp({ Component, pageProps }) {
   return (
     <>
@@ -25,13 +28,20 @@ function MyApp({ Component, pageProps }) {
     />
      <link rel="preconnect" href=" http://fonts.cdnfonts.com/css/gilroy-bold"
       />
+    <script src="https://kit.fontawesome.com/18846ba9d4.js" crossorigin="anonymous"></script>  
   </Head>
-    <Navbar/>
-        <Component {...pageProps} />
+    {/* <Navbar/> */}
+    <Frontlayout>
+      <Component {...pageProps}  />
+    </Frontlayout>
+        {/* <main>
+          {children}
+        </main> */}
          {/* FOOTER */}
   {/* <footer className="footer py-5">
     <div className="container">
       <div className="row">
+      give me a sec
         <div className="col-lg-12 col-12">
           <p className="copyright-text text-center">
             Copyright © 2019 Company Name . All rights reserved
