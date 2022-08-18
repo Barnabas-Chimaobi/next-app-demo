@@ -1,7 +1,15 @@
 import React from "react";
 import ProgressCard from "../Application/progressCard";
+import { gql, useQuery, useMutation, useLazyQuery } from '@apollo/client';
+import { GET_SLIP } from "../../api/queries/acknowledment";
 
 export default function index() {
+ const  { loading: slipLoading, error: slipError, data: slipData} = useQuery(GET_SLIP, {variables: {}});
+ const  { loading: nameLoading, error: nameError, data: nameData } = useQuery(GET_NAME);
+ const  [getName, { loading: nameLoading, error: nameError, data: nameData }] = useLazyQuery(GET_NAME);
+
+console.log(slipData, 'fyguhijkhgfdghjkl') 
+
   return (
     <>
       <div className="mt-3 container">

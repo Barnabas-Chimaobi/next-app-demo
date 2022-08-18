@@ -35,7 +35,7 @@ function MyApp({ Component, pageProps }) {
     {/* <Navbar/> */}
     <ApolloProvider client={client}>
      <Frontlayout>
-      <Component {...pageProps}  />
+       <Component {...pageProps}  />
      </Frontlayout>
     </ApolloProvider>
         {/* <main>
