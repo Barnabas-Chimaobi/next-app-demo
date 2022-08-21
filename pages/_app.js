@@ -4,6 +4,9 @@ import { Navbar } from "../components/nav"
 import { ApolloClient, ApolloLink, InMemoryCache, HttpLink, ApolloProvider } from "@apollo/client";
 import { client } from "../api";
 import Frontlayout from '../Layouts/FrontLayout/frontlayout'
+import 'antd/dist/antd.css'; // or 'antd/dist/antd.less'
+import '../styles/globals.css'
+
 // import { RestLink } from "apollo-link-rest";
 
 function MyApp({ Component, pageProps }) {
@@ -34,9 +37,9 @@ function MyApp({ Component, pageProps }) {
   </Head>
     {/* <Navbar/> */}
     <ApolloProvider client={client}>
-     <Frontlayout>
+     {/* <Frontlayout> */}
        <Component {...pageProps}  />
-     </Frontlayout>
+     {/* </Frontlayout> */}
     </ApolloProvider>
         {/* <main>
           {children}
