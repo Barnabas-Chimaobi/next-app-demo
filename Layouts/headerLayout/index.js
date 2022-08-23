@@ -5,7 +5,7 @@ const { Header, Content, Footer, Sider } = Layout;
 const HeaderLayout = () => {
   return (
     <Header style={{backgroundColor: colors.ashGrayBg}}>
-    <div className='d-flex justify-content-between'>
+    <div className='d-flex justify-content-between container'>
         <div className='d-flex  pt-3'>
              <img src={"../../ilaro-logo.jpeg"} style={{width: '50px', height: '50px', borderRadius: '10px'}}/>
              <h4 className='text-success ml-3 mt-2'>Federal Polytechnic Ilaro</h4>

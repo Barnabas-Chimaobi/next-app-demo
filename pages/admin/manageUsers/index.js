@@ -5,7 +5,7 @@ export default function index() {
   return (
     <AdminLayout>
     <div>
-       <div className='container bg-light pb-5'>
+       <div className='container bg-light pb-5 pl-5'>
         <div className='container bg-white pb-3'>
             <div className='container mt-5 mb-5'>
                 <h4 className='text-dark pt-3 pl-4'>Manage Users</h4>

@@ -8,7 +8,7 @@ export default function index() {
   return (
       <AdminLayout>
     <div>
-         <div className=' container bg-light pb-5'>
+         <div className=' container bg-light pb-5 pl-5'>
             {/* <header className='d-flex justify-content-between row'>
                <div className='d-flex justify-content-between'>
                    <div className='d-flex col-lg-6 col-sm-6 pt-3'>
