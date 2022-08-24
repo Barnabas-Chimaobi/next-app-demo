@@ -2,7 +2,13 @@ import React from 'react'
 import { AdminLayout } from '../../../Layouts/adminLayout/adminLayout'
 import { Breadcrumb, Layout, Menu } from 'antd';
 import { colors } from '../../../utils/colors';
+import { Select } from 'antd';
 const { Header, Content, Footer, Sider } = Layout;
+const { Option } = Select;
+
+const handleChange = (value) => {
+    console.log(`selected ${value}`);
+  };
 
 export default function index() {
   return (
@@ -23,57 +29,45 @@ export default function index() {
             </header> */}
             <div className=' container bg-white pb-3'>
                 <div className='container mt-5 mb-5 '>
-                    <h4 className='text-dark pt-3 pl-4'>Application Dynamic Setup</h4>
+                    <h4 className='text-dark pt-3 pl-4 pt-5'>Application Dynamic Setup</h4>
                     <form className='pl-4 pr-4'>
                         <div className='form-row row'>
-                            <div className='form-group col-lg-3'>
-                                <label>Form Section</label>
-                                <select id="" className="form-control">
-                                    <option selected>BIO-DATA</option>
-                                    <option>..</option>
-                                    <option>..</option>
-                                </select>
-                               
-                            </div>
-                            <div className='form-group col-lg-3'>
+                           <div className='form-group col-lg-3 pt-4'>
                                 <label>Input Type</label>
-                                <select id="" className="form-control">
+                                <Select id="" className="form-control" defaultValue={"BIO-DATA"}>
+                                    <option>EMAIL</option>
+                                    <option>PASSWORD</option>
+                                </Select>
+                            </div>
+                            <div className='form-group col-lg-3 pt-4'>
+                                <label>Input Type</label>
+                                <Select id="" className="form-control" defaultValue={""}>
                                     <option selected>REGULAR</option>
-                                    <option>..</option>
-                                    <option>..</option>
-                                </select>
-                                <div className='card mt-3'>
-                                    <ul>
-                                        <li style={{listStyle: 'none', color: 'black'}}>TEXT</li>
-                                        <li style={{listStyle: 'none'}}>EMAIL</li>
-                                        <li style={{listStyle: 'none'}}>PASSWORD</li>
-                                    </ul>
-                                    
-                                </div>
+                                    <option>TEXT</option>
+                                    <option>EMAIL</option>
+                                    <option>PASSWORD</option>
+                                </Select> 
                             </div>
-                            <div className='form-group col-lg-3'>
+                            <div className='form-group col-lg-3 pt-4'>
                                 <label>Input Name</label>
-                                <select id="" className="form-control">
+                                <Select id="" className="form-control" defaultValue={""}>
                                     <option selected>--</option>
                                     <option>..</option>
                                     <option>..</option>
-                                </select>
-                               
+                                </Select> 
                             </div>
-                            <div className='form-group col-lg-3'>
+                            <div className='form-group col-lg-3 pt-4'>
                                 <label>Label</label>
-                                <select id="" className="form-control">
+                                <Select id="" className="form-control" defaultValue={""}>
                                     <option selected>--</option>
                                     <option>..</option>
                                     <option>..</option>
-                                </select>
-                               
+                                </Select>
                             </div>
-
                         </div>
                     </form>
-                    <div className='text-right'>
-                        <button className='bg-success text-white p-2 border-success rounded pr-4'>Save & Continue</button>
+                    <div className='text-right' style={{paddingTop: '150px;'}}>
+                        <button className='btn btn-success rounded mr-3' style={{width:'100px;'}}>+Add</button>
                     </div>
                 </div>
             </div>
@@ -90,29 +84,54 @@ export default function index() {
                         <div className='col-lg-6'>
                             <div className="form-group">
                                 <label htmlFor="name">Birth Date</label>
-                                <input type="text" className="form-control" aria-describedby="emailHelp" />
+                                <input type="date" className="form-control" aria-describedby="emailHelp" />
                             </div>
                             <div className="form-group">
-                                <label className='' htmlFor="name">State Of Origin </label>
-                                <input type="text" className="form-control" aria-describedby="emailHelp" />
+                            <label>State of Origin</label>
+                            <Select id="" className="form-control" defaultValue={""}>
+                                <option selected></option>
+                                <option></option>
+                                <option></option>
+                                <option></option>
+                            </Select> 
                             </div>
                             <div className="form-group">
                                 <label htmlFor="name">Sex</label>
-                                <input type="text" className="form-control" aria-describedby="emailHelp" />
+                                <Select id="" className="form-control" defaultValue={""}>
+                                    <option selected></option>
+                                    <option></option>
+                                    <option></option>
+                                    <option></option>
+                                </Select> 
                             </div>
                             <div className="form-group">
                                 <label htmlFor="name">Religion</label>
-                                <input type="text" className="form-control" aria-describedby="emailHelp" />
+                                <Select id="" className="form-control" defaultValue={""}>
+                                    <option selected></option>
+                                    <option></option>
+                                    <option></option>
+                                    <option></option>
+                                </Select> 
                             </div>
                             <div className="form-group">
                                 <label htmlFor="name">Disability</label>
-                                <input type="text" className="form-control" aria-describedby="emailHelp" />
+                                <Select id="" className="form-control" defaultValue={""}>
+                                    <option selected></option>
+                                    <option></option>
+                                    <option></option>
+                                    <option></option>
+                                </Select> 
                             </div>
                         </div>
                         <div className='col-lg-6'>
                             <div className="form-group">
                                 <label htmlFor="name">State of Birth</label>
-                                <input type="text" className="form-control" aria-describedby="emailHelp" />
+                                <Select id="" className="form-control" defaultValue={""}>
+                                    <option selected></option>
+                                    <option></option>
+                                    <option></option>
+                                    <option></option>
+                                </Select> 
                             </div>
                             <div className="form-group">
                                 <label htmlFor="name">City of Residence</label>
@@ -133,8 +152,8 @@ export default function index() {
                         </div>
                     </div>            
                 </form>
-                <div className='text-right pr-4'>
-                    <button className='bg-success text-white p-2 border-success rounded'>Next</button>
+                <div className='text-right pr-4' style={{paddingTop: '150px;'}}>
+                    <button className='btn btn-success rounded mr-3' style={{width:'100px;'}}>Next</button>
                 </div>
             </div>
 
