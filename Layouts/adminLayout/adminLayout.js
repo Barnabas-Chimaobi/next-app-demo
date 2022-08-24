@@ -42,7 +42,7 @@ import { HeaderLayout } from '../headerLayout';
           minHeight: '100vh',
         }}
       >
-        <Sider className='side-menu' style={{position: 'fixed', minHeight: '100vh'}} collapsible collapsed={collapsed} onCollapse={(value) => setCollapsed(value)}>
+        <Sider className='side-menu' style={{ minHeight: '100vh'}} collapsible collapsed={collapsed} onCollapse={(value) => setCollapsed(value)}>
           <div className="logo" />
           <Menu className='menu' defaultSelectedKeys={['1']} mode="inline" items={items} />
         </Sider>

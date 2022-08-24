@@ -8,7 +8,7 @@ export default function index() {
   return (
       <AdminLayout>
     <div>
-         <div className=' container bg-light pb-5 pl-5'>
+         <div className=' container bg-light pb-5 pl-2 pt-2'>
             {/* <header className='d-flex justify-content-between row'>
                <div className='d-flex justify-content-between'>
                    <div className='d-flex col-lg-6 col-sm-6 pt-3'>
@@ -44,7 +44,7 @@ export default function index() {
                                 </select>
                                 <div className='card mt-3'>
                                     <ul>
-                                        <li style={{listStyle: 'none'}}>TEXT</li>
+                                        <li style={{listStyle: 'none', color: 'black'}}>TEXT</li>
                                         <li style={{listStyle: 'none'}}>EMAIL</li>
                                         <li style={{listStyle: 'none'}}>PASSWORD</li>
                                     </ul>
@@ -93,7 +93,7 @@ export default function index() {
                                 <input type="text" className="form-control" aria-describedby="emailHelp" />
                             </div>
                             <div className="form-group">
-                                <label htmlFor="name">State Of Origin </label>
+                                <label className='' htmlFor="name">State Of Origin </label>
                                 <input type="text" className="form-control" aria-describedby="emailHelp" />
                             </div>
                             <div className="form-group">
