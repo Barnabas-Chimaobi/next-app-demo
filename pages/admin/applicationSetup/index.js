@@ -3,6 +3,7 @@ import { AdminLayout } from '../../../Layouts/adminLayout/adminLayout'
 import { Breadcrumb, Layout, Menu } from 'antd';
 import { colors } from '../../../utils/colors';
 import { Select } from 'antd';
+import { Form } from 'react-bootstrap';
 const { Header, Content, Footer, Sider } = Layout;
 const { Option } = Select;
 
@@ -34,35 +35,35 @@ export default function index() {
                         <div className='form-row row'>
                            <div className='form-group col-lg-3 pt-4'>
                                 <label>Input Type</label>
-                                <Select id="" className="form-control" defaultValue={"BIO-DATA"}>
+                                <Form.Select id="" className="form-control" defaultValue={"BIO-DATA"}>
                                     <option>EMAIL</option>
                                     <option>PASSWORD</option>
-                                </Select>
+                                </Form.Select>
                             </div>
                             <div className='form-group col-lg-3 pt-4'>
                                 <label>Input Type</label>
-                                <Select id="" className="form-control" defaultValue={""}>
+                                <Form.Select id="" className="form-control" defaultValue={""}>
                                     <option selected>REGULAR</option>
                                     <option>TEXT</option>
                                     <option>EMAIL</option>
                                     <option>PASSWORD</option>
-                                </Select> 
+                                </Form.Select> 
                             </div>
                             <div className='form-group col-lg-3 pt-4'>
                                 <label>Input Name</label>
-                                <Select id="" className="form-control" defaultValue={""}>
+                                <Form.Select id="" className="form-control" defaultValue={""}>
                                     <option selected>--</option>
                                     <option>..</option>
                                     <option>..</option>
-                                </Select> 
+                                </Form.Select> 
                             </div>
                             <div className='form-group col-lg-3 pt-4'>
                                 <label>Label</label>
-                                <Select id="" className="form-control" defaultValue={""}>
+                                <Form.Select id="" className="form-control" defaultValue={""}>
                                     <option selected>--</option>
                                     <option>..</option>
                                     <option>..</option>
-                                </Select>
+                                </Form.Select>
                             </div>
                         </div>
                     </form>
@@ -88,50 +89,50 @@ export default function index() {
                             </div>
                             <div className="form-group">
                             <label>State of Origin</label>
-                            <Select id="" className="form-control" defaultValue={""}>
+                            <Form.Select id="" className="form-control" defaultValue={""}>
                                 <option selected></option>
                                 <option></option>
                                 <option></option>
                                 <option></option>
-                            </Select> 
+                            </Form.Select> 
                             </div>
                             <div className="form-group">
                                 <label htmlFor="name">Sex</label>
-                                <Select id="" className="form-control" defaultValue={""}>
+                                <Form.Select id="" className="form-control" defaultValue={""}>
                                     <option selected></option>
                                     <option></option>
                                     <option></option>
                                     <option></option>
-                                </Select> 
+                                </Form.Select> 
                             </div>
                             <div className="form-group">
                                 <label htmlFor="name">Religion</label>
-                                <Select id="" className="form-control" defaultValue={""}>
+                                <Form.Select id="" className="form-control" defaultValue={""}>
                                     <option selected></option>
                                     <option></option>
                                     <option></option>
                                     <option></option>
-                                </Select> 
+                                </Form.Select> 
                             </div>
                             <div className="form-group">
                                 <label htmlFor="name">Disability</label>
-                                <Select id="" className="form-control" defaultValue={""}>
+                                <Form.Select id="" className="form-control" defaultValue={""}>
                                     <option selected></option>
                                     <option></option>
                                     <option></option>
                                     <option></option>
-                                </Select> 
+                                </Form.Select> 
                             </div>
                         </div>
                         <div className='col-lg-6'>
                             <div className="form-group">
                                 <label htmlFor="name">State of Birth</label>
-                                <Select id="" className="form-control" defaultValue={""}>
+                                <Form.Select id="" className="form-control" defaultValue={""}>
                                     <option selected></option>
                                     <option></option>
                                     <option></option>
                                     <option></option>
-                                </Select> 
+                                </Form.Select> 
                             </div>
                             <div className="form-group">
                                 <label htmlFor="name">City of Residence</label>
