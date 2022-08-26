@@ -117,8 +117,8 @@ export default function Home() {
               </div>
 
               <button
-                style={{ backgroundColor: "#047735" }}
-                className="btn text-white btn-block pt-4 pb-4"
+                style={{ backgroundColor: "#047735", fontSize: "15px" }}
+                className="btn text-white btn-block pt-3 pb-3"
                 type="submit"
               >
                 Sign In
@@ -180,7 +180,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <p style={{ color: "#047735", float: "right", marginTop: "1em" }}>
+        <p style={{ color: "#047735", float: "right" }}>
           (C) 2022, All Rights Reserved.
         </p>
       </div>
