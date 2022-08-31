@@ -46,11 +46,11 @@ function MyApp({ Component, pageProps }) {
           crossorigin="anonymous"
         ></script>
       </Head>
-      {/* <Navbar/>  */}
+      {/* <Navbar/> ,  */}
       <ApolloProvider client={client}>
-        <Frontlayout>
-          <Component {...pageProps} />
-        </Frontlayout>
+        {/* <Frontlayout> */}
+        <Component {...pageProps} />
+        {/* </Frontlayout> */}
       </ApolloProvider>
       {/* <main>
           {children}

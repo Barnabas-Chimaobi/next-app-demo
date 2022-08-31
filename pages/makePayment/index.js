@@ -10,8 +10,7 @@ export default function index() {
       <div className="container d-block d-lg-flex">
         <div
           className="card col-lg-8 col-sm-12"
-          style={{ paddingBottom: "40px" }}
-        >
+          style={{ paddingBottom: "40px" }}        >
           <div className="">
             <div className="d-flex justify-content-center">
               <img src="ilaro-logo.jpeg" className="ml-5" />
