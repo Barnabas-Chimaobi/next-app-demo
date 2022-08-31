@@ -21,7 +21,7 @@ a {
   }
   body {
     color: white;
-    background: black;
+    /* background: black; */
   }
 }
 
@@ -39,12 +39,12 @@ a {
 }
 
 .site-layout-background {
-  background-color: 'red';
+  background-color: "red";
   color: white;
 }
 
 .site-layout {
-  background-color: '#F7F8F9';
+  background-color: "#F7F8F9";
 }
 
 .content {

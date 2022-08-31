@@ -1,0 +1,149 @@
+<div className="container row justify-content-center mt-5 pb-5">
+          <div className="col-lg-4 col-sm-12 card border-success pt-5 pb-5 pl-4 pr-4">
+            <div className="mt-3">
+              <h2 className="mb-3 text-success font-weight-bold">Welcome</h2>
+              <p className="text-success">
+                Please provide your username and password
+              </p>
+            </div>
+            <div className="pt-3">
+              <div className="mt-4">
+                <input
+                  type="text"
+                  className="form-control bg-light"
+                  id="inputRRR"
+                  placeholder="Username"
+                  onChange={(text) => setUsername(text)}
+                  //   style={{ width: "40px" }}
+                />
+              </div>
+              <div className="mt-3">
+                <input
+                  type="text"
+                  className="form-control bg-light"
+                  id="inputRRR"
+                  placeholder="Password"
+                  onChange={(text) => setPassword(text)}
+                  //   style={{ width: "400px" }}
+                />
+              </div>
+              {/*  submit button */}
+              <div className="mt-5 mb-3">
+                <button
+                  type="submit"
+                  className="btn darkGreen btn-block"
+                  style={{ width: "" }}
+                  onClick={() => loginStaff()}
+                >
+                  <a
+                    className="submit-link"
+                    style={{ textDecoration: "none" }}
+                    // href="applicationForm.html"
+                  >
+                    Login
+                  </a>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+
+
+
+
+        <centre style={{ height: "100vh" }}>
+            <div
+            // style={{
+            //   display: "flex",
+            //   alignItems: "center",
+            //   justifyContent: "center",
+            // }}
+            >
+              <Row style={{ marginTop: "2em" }}>
+                <Col lg="5" sm="12" style={{ padding: "90px 20px" }}>
+                  <div>
+                    <Space
+                      style={{
+                        display: "flex",
+                        flexDirection: "row",
+                        // justifyContent: "flex-start",
+                        // textAlign: "center",
+                      }}
+                    >
+                      <Text
+                        style={{
+                          fontWeight: "bold",
+                          fontSize: "24px",
+                          marginBottom: "500px",
+                          gap: "200px",
+                        }}
+                      >
+                        Welcome
+                      </Text>
+                      <br />
+    
+                      <Text style={{ fontWeight: 500 }} className="text-success">
+                        Please provide your username and password
+                      </Text>
+                    </Space>
+                    <div className="pt-3">
+                      <div className="mt-4">
+                        <input
+                          type="text"
+                          className="form-control bg-light"
+                          id="inputRRR"
+                          placeholder="Username"
+                          onChange={(text) => setUsername(text)}
+                          //   style={{ width: "40px" }}
+                        />
+                      </div>
+                      <div className="mt-3">
+                        <input
+                          type="text"
+                          className="form-control bg-light"
+                          id="inputRRR"
+                          placeholder="Password"
+                          onChange={(text) => setPassword(text)}
+                          //   style={{ width: "400px" }}
+                        />
+                      </div>
+                      {/*  submit button */}
+                      <div className="mt-5 mb-3">
+                        <button
+                          type="submit"
+                          className="btn darkGreen btn-block"
+                          style={{ width: "" }}
+                          onClick={() => loginStaff()}
+                        >
+                          <a
+                            className="submit-link"
+                            style={{ textDecoration: "none" }}
+                            // href="applicationForm.html"
+                          >
+                            Login
+                          </a>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </Col>
+    
+                <Col lg="7" sm="12" style={{ marginLeft: "-20px" }}>
+                  <div style={{ backgroundColor: "darkgreen", width: "" }}>
+                    <Text>HelloWorld</Text>
+                  </div>
+                </Col>
+              </Row>
+            </div>
+          </centre>
+
+
+
+
+
+
+
+          
