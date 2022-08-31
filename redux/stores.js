@@ -2,7 +2,7 @@ import { configureStore, getDefaultMiddleware, combineReducers } from '@reduxjs/
 import { persistReducer, persistStore } from 'redux-persist';
 import { FLUSH, PAUSE, PERSIST, PURGE, REGISTER, REHYDRATE, PersistConfig } from 'redux-persist';
 import {
-    userSlice,deparmentSlice, questionsSlice, answerSlice
+    userSlice, formSlice
 } from './reducers';
 import thunkMiddleware from 'redux-thunk';
 import storage from 'redux-persist/lib/storage';
@@ -15,9 +15,7 @@ const persistConfig = {
 
  const rootReducer = combineReducers({ 
     user: userSlice,
-    department: deparmentSlice,
-    questions: questionsSlice,
-    answer: answerSlice
+    form: formSlice
   })
 
  const persistedReducer = persistReducer(persistConfig, rootReducer)

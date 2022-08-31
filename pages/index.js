@@ -1,25 +1,26 @@
 import React, { useState } from "react";
 import { gql, useQuery, useMutation, useLazyQuery } from '@apollo/client';
 import { STAFF_LOGIN } from "../api/mutations/authMutation";
-
+import { useRouter } from "next/router";
 
 export default function index() {
+  const router = useRouter()
   const  [staffLogin, { loading: loginLoading, error: loginError, data: loginData }] = useMutation(STAFF_LOGIN);
   const  [username, setUsername] = useState('')
   const   [password, setPassword] = useState('')
 
   const loginStaff = async () => {
+    console.log( username, password,  'login======')
     const login = await staffLogin({variables: {
       username: username,
       password: password
     }})
-    console.log(login,  'login======')
   }
   
-  if(loginError){console.log(loginError, 'errooorrsss====')}
-  if(loginLoading){console.log(loginLoading, 'loginloadinggsss====')}
+  // if(loginError){console.log(loginError, 'errooorrsss====')}
+  // if(loginLoading){console.log(loginLoading, 'loginloadinggsss====')}
   if(loginData){
-    
+    router.push('./admin/applicationSetup')
     console.log(loginData, 'logindataaaaass====')
   }
   
@@ -39,7 +40,7 @@ export default function index() {
                         className="form-control bg-light"
                         id="inputRRR"
                         placeholder="Username"
-                        onChange={(text) => setUsername(text)}
+                        onChange={(text) => setUsername(text.target.value)}
                         //   style={{ width: "40px" }}
                     />
                     </div>
@@ -49,7 +50,7 @@ export default function index() {
                         className="form-control bg-light"
                         id="inputRRR"
                         placeholder="Password"
-                        onChange={(text) => setPassword(text)}
+                        onChange={(text) => setPassword(text.target.value)}
                         //   style={{ width: "400px" }}
                     />
                     </div>

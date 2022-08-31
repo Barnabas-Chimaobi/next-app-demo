@@ -1,3 +1,6 @@
+import { useDispatch, useSelector } from 'react-redux'
+import { fieldName, fieldType } from '../redux/reducers'
+
 export const implementAddField = () => {
     
     var formGroup = document.createElement('div')
@@ -24,13 +27,17 @@ export const implementAddField = () => {
 }
 
 export const handleLabel = (event) => {
-const target = event.target.value;
-setfieldlabel(target);
-console.log(fieldname)
+   //  const dispatch = useDispatch()
+
+   console.log(event.target.value, 'targetvalue====')
+   const target = event.target.value;
+   // dispatch(fieldName(target))
+//    setfieldlabel(target);
+   console.log(fieldname)
 };
 
 export const handleInputType = (event) => {
 const target = event.target.value;
-setfieldtype(target);
+// setfieldtype(target);
 console.log(fieldname)
 };
