@@ -35,7 +35,7 @@ function MyApp({ Component, pageProps }) {
       />
     <script src="https://kit.fontawesome.com/18846ba9d4.js" crossorigin="anonymous"></script>  
   </Head>
-     {/* <Navbar/>  */}
+     <Navbar/> , 
     <ApolloProvider client={client}>
      {/* <Frontlayout> */}
        <Component {...pageProps}  />
