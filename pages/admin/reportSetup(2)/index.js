@@ -1,6 +1,7 @@
 import React from 'react'
 import { AdminLayout } from '../../../Layouts/adminLayout/adminLayout'
 import { Select } from 'antd'
+import { Form } from 'react-bootstrap';
 const { Option } = Select;
 
 
@@ -17,61 +18,61 @@ export default function index() {
                         <div className='col-lg-6'> 
                                 <div className="form-group">
                                     <label htmlFor="exampleFormControlSelect1">Session</label>
-                                    <Select id="" className="form-control" defaultValue={""}>
+                                    <Form.Select id="" className="form-control" defaultValue={""}>
                                         <option selected>REGULAR</option>
                                         <option>TEXT</option>
                                         <option>EMAIL</option>
                                         <option>PASSWORD</option>
-                                    </Select> 
+                                    </Form.Select> 
                                
                                 </div>
                                 <div className="form-group">
                                     <label htmlFor="exampleFormControlSelect1">Programme</label>
-                                    <Select id="" className="form-control" defaultValue={""}>
+                                    <Form.Select id="" className="form-control" defaultValue={""}>
                                         <option selected>REGULAR</option>
                                         <option>TEXT</option>
                                         <option>EMAIL</option>
                                         <option>PASSWORD</option>
-                                    </Select> 
+                                    </Form.Select> 
                                
                                 </div>
                                 <div className="form-group">
                                     <label htmlFor="exampleFormControlSelect1">Department</label>
-                                    <Select id="" className="form-control" defaultValue={""}>
+                                    <Form.Select id="" className="form-control" defaultValue={""}>
                                         <option selected>REGULAR</option>
                                         <option>TEXT</option>
                                         <option>EMAIL</option>
                                         <option>PASSWORD</option>
-                                    </Select> 
+                                    </Form.Select> 
                                
                                 </div>
                         </div>
                         <div className='col-lg-6'>
                                 <div className="form-group">
                                         <label htmlFor="exampleFormControlSelect1">Semester</label>
-                                        <Select id="" className="form-control" defaultValue={""}>
+                                        <Form.Select id="" className="form-control" defaultValue={""}>
                                             <option selected>REGULAR</option>
                                             <option>TEXT</option>
                                             <option>EMAIL</option>
                                             <option>PASSWORD</option>
-                                        </Select> 
+                                        </Form.Select> 
                                
                                 </div>
                                 <div className="form-group">
                                     <label htmlFor="exampleFormControlSelect1">Level</label>
-                                    <Select id="" className="form-control" defaultValue={""}>
+                                    <Form.Select id="" className="" defaultValue={""}>
                                         <option selected>REGULAR</option>
                                         <option>TEXT</option>
                                         <option>EMAIL</option>
                                         <option>PASSWORD</option>
-                                    </Select> 
+                                    </Form.Select> 
                                
                                 </div>
                             </div>
                         </form>
-                        <div className='text-right' style={{paddingTop: '150px;'}}>
-                            <button className='btn btn-success rounded mr-3'>Display Report</button>
-                            <button className=' btn border-success bg-white text-success p-2 rounded'>Bulk Report</button>
+                        <div className='text-right' style={{paddingTop: '150px', alignItems: 'center',}}>
+                            <button className='btn btn-success rounded' style={{margin: "10px"}}>Display Report</button>
+                            <button className=' btn border-success bg-white text-success p-2 rounded' style={{margin: "10px"}}>Bulk Report</button>
 
                         </div>
                     </div>

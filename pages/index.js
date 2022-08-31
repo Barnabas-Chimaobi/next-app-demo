@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { gql, useQuery, useMutation, useLazyQuery } from '@apollo/client';
 import { STAFF_LOGIN } from "../api/mutations/authMutation";
 import { useRouter } from "next/router";
+import Frontlayout from '../Layouts/FrontLayout/frontlayout'
 
 export default function index() {
   const router = useRouter()
@@ -25,6 +26,7 @@ export default function index() {
   }
   
   return (
+    <Frontlayout>
     <div>
       <center>
         <div className="container row justify-content-center mt-5 pb-5">
@@ -77,5 +79,6 @@ export default function index() {
         </div>
       </center>
     </div>
+    </Frontlayout>
   );
 }
