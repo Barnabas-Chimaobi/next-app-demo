@@ -1,6 +1,6 @@
 import Frontlayout from "../../Layouts/FrontLayout/frontlayout";
-import ProgressCard from "../Application/progressCard";
-import { Card, Col, Row } from "react-bootstrap";
+import ProgressCard from "./ProgressCard";
+import { Card, Col, Form, Row } from "react-bootstrap";
 import { Typography, Space, Divider, Button, Input } from "antd";
 
 const { Text } = Typography;
@@ -9,7 +9,11 @@ export default function Admission() {
   return (
     <div>
       <Frontlayout>
-        <div className="d-block d-lg-flex container mt-3 mb-3">
+        <div
+          className="d-block d-lg-flex container mt-3 mb-3"
+          style={{ gap: 20 }}>
+          {/* <Row> */}
+          {/* <Col lg={6} sm={6}> */}
           <div>
             <Card
               style={{
@@ -173,6 +177,7 @@ export default function Admission() {
                     "0px 60px 147px rgba(0, 0, 0, 0.035), 0px 7.51293px 18.4067px rgba(0, 0, 0, 0.07)",
                   borderRadius: "10px",
                   padding: "32px 40px",
+                  marginBottom: "62px",
                 }}>
                 <Text
                   style={{
@@ -320,10 +325,269 @@ export default function Admission() {
                     style={{ border: "1px solid #000000", height: "0px" }}
                   />
                 </div>
+                <div>
+                  <Row>
+                    <Col lg={6} sm={6}>
+                      <Text
+                        style={{
+                          fontSize: "14px",
+                          lineHeight: "16px",
+                          textTransform: "capitalize",
+                          color: "#3E4851",
+                        }}>
+                        Hostel Invoice Number
+                      </Text>
+                      <Input
+                        style={{
+                          background: "#E1E1E1",
+                          borderRadius: "5px",
+                        }}
+                      />
+                      <Button
+                        style={{
+                          background: "#047735",
+                          borderRadius: "5px",
+                          padding: "12px 38px",
+                          display: "flex",
+                          justifyContent: "center",
+                          alignItems: "center",
+                          marginTop: "54px",
+                          marginBottom: "76px",
+                        }}>
+                        <Text
+                          style={{
+                            fontSize: "16px",
+                            lineHeight: "19px",
+                            textTransform: "capitalize",
+                            color: "#FFFFFF",
+                          }}>
+                          Generate Hostel Receipt
+                        </Text>
+                      </Button>
+                    </Col>
+                    <Col lg={6} sm={6} style={{ alignItems: "end" }}>
+                      <Text
+                        style={{
+                          fontSize: "14px",
+                          lineHeight: "16px",
+                          textTransform: "capitalize",
+                          color: "#3E4851",
+                        }}>
+                        Hostel Confirmation Number
+                      </Text>
+                      <Input
+                        style={{
+                          background: "#E1E1E1",
+                          borderRadius: "5px",
+                        }}
+                      />
+                      <Space
+                        className="d-block d-lg-flex d-xl-flex"
+                        style={{
+                          marginTop: "54px",
+                          alignSelf: "flex-end",
+                        }}>
+                        <Button
+                          style={{
+                            marginBottom: "10px",
+                            border: "1px solid #047735",
+                            borderRadius: "100px",
+                          }}>
+                          <Text
+                            style={{
+                              fontSize: "12px",
+                              lineHeight: "14px",
+                              textTransform: "uppercase",
+                              color: "#047735",
+                            }}>
+                            PRINT ADMISSION LETTER
+                          </Text>
+                        </Button>
+                        <Button
+                          style={{
+                            marginBottom: "10px",
+                            border: "1px solid #047735",
+                            borderRadius: "100px",
+                          }}>
+                          <Text
+                            style={{
+                              fontSize: "12px",
+                              lineHeight: "14px",
+                              textTransform: "uppercase",
+                              color: "#047735",
+                            }}>
+                            PRINT rECEIPT
+                          </Text>
+                        </Button>
+                      </Space>
+                    </Col>
+                  </Row>
+                  <Divider
+                    style={{ border: "1px solid #000000", height: "0px" }}
+                  />
+                </div>
+                <div>
+                  <Text
+                    style={{
+                      fontSize: "12px",
+                      lineHeight: "14px",
+                      textTransform: "uppercase",
+                      color: "#616161",
+                    }}>
+                    Generate ScHOOL FEES Invoice{" "}
+                  </Text>
+                  <div
+                    style={{
+                      background: "#E5E5E5",
+                      paddingTop: "84px",
+                      paddingRight: "29px",
+                      paddingLeft: "29px",
+                      paddingBottom: "29px",
+                    }}>
+                    <Row>
+                      <Col lg={4} sm={6} style={{ marginBottom: "10px" }}>
+                        <Space
+                          style={{
+                            flexDirection: "column",
+                            alignItems: "flex-start",
+                          }}>
+                          <Text
+                            style={{
+                              fontSize: "12px",
+                              lineHeight: "14px",
+                              color: "#0C0B0B",
+                            }}>
+                            Acceptance Receipt Number
+                          </Text>
+                          <Text
+                            style={{
+                              fontSize: "12px",
+                              lineHeight: "14px",
+                              fontWeight: 700,
+                              color: "#0C0B0B",
+                            }}>
+                            637766803863796215
+                          </Text>
+                        </Space>
+                      </Col>
+                      <Col lg={4} sm={6} style={{ marginBottom: "10px" }}>
+                        <Space
+                          style={{
+                            flexDirection: "column",
+                            alignItems: "flex-start",
+                          }}>
+                          <Text
+                            style={{
+                              fontSize: "12px",
+                              lineHeight: "14px",
+                              color: "#0C0B0B",
+                            }}>
+                            Include CISCO?
+                          </Text>
+                          <Form.Select
+                            defaultValue={"SELECT"}
+                            className="form-control"
+                            style={{ width: "200px" }}>
+                            <option>SELECT</option>
+                          </Form.Select>
+                        </Space>
+                      </Col>
+                      <Col lg={4} sm={6} style={{ marginBottom: "10px" }}>
+                        <Space
+                          style={{
+                            flexDirection: "column",
+                            alignItems: "flex-start",
+                          }}>
+                          <Text
+                            style={{
+                              fontSize: "12px",
+                              lineHeight: "14px",
+                              color: "#0C0B0B",
+                            }}>
+                            Regenerate Invoice?
+                          </Text>
+                          <Form.Select
+                            defaultValue={"SELECT"}
+                            className="form-control"
+                            style={{ width: "200px" }}>
+                            <option>SELECT</option>
+                          </Form.Select>
+
+                          <Button
+                            style={{
+                              background: "#047735",
+                              borderRadius: "5px",
+                              padding: "12px",
+                              alignItems: "center",
+                              display: "flex",
+                              justifyContent: "center",
+                              marginTop: "40px",
+                            }}>
+                            <Text
+                              style={{
+                                fontSize: "14px",
+                                lineHeight: "16px",
+                                textTransform: "capitalize",
+                                color: "#FFFFFF",
+                              }}>
+                              Generate School Fees Invoice
+                            </Text>
+                          </Button>
+                        </Space>
+                      </Col>
+                    </Row>
+                  </div>
+                </div>
+                <Space
+                  className="d-block d-lg-flex d-xl-flex"
+                  style={{
+                    justifyContent: "space-between",
+                    marginTop: "50px",
+                  }}>
+                  <Button
+                    style={{
+                      border: "1px solid #047735",
+                      borderRadius: "100px",
+                    }}>
+                    <Text
+                      style={{
+                        fontSize: "12px",
+                        lineHeight: "14px",
+                        textTransform: "uppercase",
+
+                        color: "#047735",
+                      }}>
+                      PRINT School fees Invoice
+                    </Text>
+                  </Button>
+                  <div style={{ marginTop: "57px" }}>
+                    <Button
+                      style={{
+                        background: "#047735",
+                        borderRadius: "5px",
+                      }}>
+                      <Text
+                        style={{
+                          fontSize: "16px",
+                          lineHeight: "19px",
+
+                          textTransform: "capitalize",
+
+                          color: "#FFFFFF",
+                        }}>
+                        Next
+                      </Text>
+                    </Button>
+                  </div>
+                </Space>
               </Card>
             </div>
           </div>
+          {/* </Col> */}
+          {/* <Col lg={6} sm={6}> */}
           <ProgressCard />
+          {/* </Col> */}
+          {/* </Row> */}
         </div>
       </Frontlayout>
     </div>

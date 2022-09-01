@@ -56,6 +56,7 @@ function MyApp({ Component, pageProps }) {
       {/* <main>
           {children}
         </main> */}
+  
       {/* FOOTER */}
       {/* <footer className="footer py-5">
     <div className="container">

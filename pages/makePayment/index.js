@@ -7,10 +7,9 @@ export default function index() {
     <div>
       <Frontlayout>
         <div
+          // <<<<<<< HEAD
           className="d-block d-lg-flex container mt-3 mb-3"
-          style={{ fontFamily: "Montserrat" }}>
-          <h2 className="">Make Payment</h2>
-        </div>
+          style={{ fontFamily: "Montserrat" }}></div>
         <div className="container d-block d-lg-flex">
           <div
             className="card col-lg-8 col-sm-12"
