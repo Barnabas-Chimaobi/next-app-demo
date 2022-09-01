@@ -1,11 +1,17 @@
-import Head from "next/head"
-import Script from "next/script"
-import { Navbar } from "../components/nav"
-import { ApolloClient, ApolloLink, InMemoryCache, HttpLink, ApolloProvider } from "@apollo/client";
+import Head from "next/head";
+import Script from "next/script";
+import { Navbar } from "../components/nav";
+import {
+  ApolloClient,
+  ApolloLink,
+  InMemoryCache,
+  HttpLink,
+  ApolloProvider,
+} from "@apollo/client";
 import { client } from "../api";
-import Frontlayout from '../Layouts/FrontLayout/frontlayout'
-import 'antd/dist/antd.css'; // or 'antd/dist/antd.less'
-import '../styles/globals.css'
+import Frontlayout from "../Layouts/FrontLayout/frontlayout";
+import "antd/dist/antd.css"; // or 'antd/dist/antd.less'
+import "../styles/globals.css";
 
 // import { RestLink } from "apollo-link-rest";
 
@@ -44,9 +50,9 @@ function MyApp({ Component, pageProps }) {
         {/* <main>
           {children}
         </main> */}
-        
-         {/* FOOTER */}
-  {/* <footer className="footer py-5">
+
+      {/* FOOTER */}
+      {/* <footer className="footer py-5">
     <div className="container">
       <div className="row">
       give me a sec
@@ -64,13 +70,12 @@ function MyApp({ Component, pageProps }) {
       </div>
     </div>
   </footer> */}
-   {/* <Script src="js/jquery-3.3.1.min.js"></Script>
+      {/* <Script src="js/jquery-3.3.1.min.js"></Script>
     <Script src="js/popper.min.js"></Script>
     <Script src="js/bootstrap.min.js"></Script>
     <Script src="js/custom.js"></Script> */}
-
     </>
-  )
+  );
 }
 
-export default MyApp
+export default MyApp;

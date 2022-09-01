@@ -1,133 +1,130 @@
-*, *::before, *::after{
-    box-sizing: border-box;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
-
 
 :root {
-    
-    --DarkGreen: #067635;
-    --White: rgb(255, 255, 255);
-    --LightGrey: rgba(225, 225, 225, 1);
-    --DarkGrey: rgba(197, 197, 197, 1);
-    --Lightgreen: #12984B;
-    --yellow: rgb(240,221,55);
-    --LightYellow: rgba(242, 223, 55, 1);
-    --fadedGrey: rgba(168, 168, 168, 0.5);
+  --DarkGreen: #067635;
+  --White: rgb(255, 255, 255);
+  --LightGrey: rgba(225, 225, 225, 1);
+  --DarkGrey: rgba(197, 197, 197, 1);
+  --Lightgreen: #12984b;
+  --yellow: rgb(240, 221, 55);
+  --LightYellow: rgba(242, 223, 55, 1);
+  --fadedGrey: rgba(168, 168, 168, 0.5);
 }
 
-
-body{
-    margin: 0;
+body {
+  margin: 0;
 }
-header{
-    /* height: 80px; */
-    background-color: var(--DarkGreen);
-    color: var(--White);
-    width: 100%;
+header {
+  /* height: 80px; */
+  background-color: var(--DarkGreen);
+  color: var(--White);
+  width: 100%;
 }
-.ilaro-logo{
-    /* padding: 6px 5px 5px 6px; */
-    /* height: 70px; */
-    /* width: 70px; */
-    border-radius: 10px;
-    /* margin-left: 40px; */
+.ilaro-logo {
+  /* padding: 6px 5px 5px 6px; */
+  /* height: 70px; */
+  /* width: 70px; */
+  border-radius: 10px;
+  /* margin-left: 40px; */
 }
-.nav_menu{
-    display: grid
+.nav_menu {
+  display: grid;
 }
-.cont{
-    border-radius: 10px;
-    background-color: var(--White);
-    box-shadow: 4px 6px 6px #888888;
-    /* height: auto; */
-    /* padding: 20px; */
-    /* display: flex; */
+.cont {
+  border-radius: 10px;
+  background-color: var(--White);
+  box-shadow: 4px 6px 6px #888888;
+  /* height: auto; */
+  /* padding: 20px; */
+  /* display: flex; */
 }
-.form-style{
-    height: 60vh;
+.form-style {
+  height: 60vh;
 }
-.submit-link{
-    color: var(--White);
+.submit-link {
+  color: var(--White);
 }
 .submit-link:hover {
-    color: var(--White);
-    text-decoration: none;
+  color: var(--White);
+  text-decoration: none;
 }
-.lightGreen{
-    background-color: var(--Lightgreen);
+.lightGreen {
+  background-color: var(--Lightgreen);
 }
-.darkGreen{
-    background-color: var(--DarkGreen) !important;
+.darkGreen {
+  background-color: var(--DarkGreen) !important;
 }
-.darkGreenc{
-    color: var(--DarkGreen);
+.darkGreenc {
+  color: var(--DarkGreen);
 }
-.lightGrey{
-    background-color: var(--LightGrey) !important;
+.lightGrey {
+  background-color: var(--LightGrey) !important;
 }
-.darkGrey{
-    background-color: var(--DarkGrey);
+.darkGrey {
+  background-color: var(--DarkGrey);
 }
-.fee{
-    padding: 10px;
-    height: 40vh;
-    
+.fee {
+  padding: 10px;
+  height: 40vh;
 }
-.newStudent{
-    height: 80vh;
-    background-color: var(--DarkGreen);
-    
+.newStudent {
+  height: 80vh;
+  background-color: var(--DarkGreen);
 }
-.newStudentSection{
-    background-color: var(--lightGreen);
-    height: 40px;
-    margin-top: 20px;
-    margin-left: 0;
-    color: var(--White);
+.newStudentSection {
+  background-color: var(--lightGreen);
+  height: 40px;
+  margin-top: 20px;
+  margin-left: 0;
+  color: var(--White);
 }
-.numberOne{
-    border: 1px solid var(--yellow);
-    width: 50px;
-    height: 60px; 
-    padding: 10px;
+.numberOne {
+  border: 1px solid var(--yellow);
+  width: 50px;
+  height: 60px;
+  padding: 10px;
 }
-.vlDefault{
-    border-left: 1px solid var(--fadedGrey);
-    height: 25px;
+.vlDefault {
+  border-left: 1px solid var(--fadedGrey);
+  height: 25px;
 }
-.vlActive{
-    border-left: 1px solid var(--LightYellow);
-    height: 25px;
+.vlActive {
+  border-left: 1px solid var(--LightYellow);
+  height: 25px;
 }
-.address-menu{
-    list-style: none;
+.address-menu {
+  list-style: none;
 }
-.backBtn-link{
-    color: var(--DarkGreen);
+.backBtn-link {
+  color: var(--DarkGreen);
 }
-.backBtn-link:hover{
-    color: var(--DarkGreen);
+.backBtn-link:hover {
+  color: var(--DarkGreen);
+}
+.Activestep {
+  border: 1px solid var(--LightYellow);
+  height: 64px;
+  width: 64px;
+}
+.Defaultstep {
+  border: 1px solid var(--fadedGrey);
+  height: 64px;
+  width: 64px;
+}
+.stepNumber {
+  width: 28px;
+  height: 29px;
+  font-size: 24px;
+}
+.lightYellow {
+  color: var(--LightYellow);
+}
+.fadedGrey {
+  color: var(--fadedGrey);
+}
 
-}
-.Activestep{
-    border: 1px solid var(--LightYellow);
-    height: 64px;
-    width: 64px;
-}
-.Defaultstep{
-    border: 1px solid var(--fadedGrey);
-    height: 64px;
-    width: 64px;
-}
-.stepNumber{
-    width: 28px;
-    height: 29px;
-    font-size: 24px;
-}
-.lightYellow{
-    color: var(--LightYellow);
-}
-.fadedGrey{
-    color: var(--fadedGrey);
-}
 
