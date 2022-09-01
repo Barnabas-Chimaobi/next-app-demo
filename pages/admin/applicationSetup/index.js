@@ -3,12 +3,15 @@ import { AdminLayout } from '../../../Layouts/adminLayout/adminLayout'
 import { Breadcrumb, Layout, Menu } from 'antd';
 import { colors } from '../../../utils/colors';
 import { useDispatch, useSelector } from 'react-redux'
+import { APPLICATION_SETUP } from '../../../api/mutations/adminMutation';
+import { useMutation } from '@apollo/client';
 const { Header, Content, Footer, Sider } = Layout;
 
 export default function index() {
     let [fieldname, setfieldname] = React.useState("");
     let [field_type, setfieldtype] = React.useState("");
     let [field_label, setfieldlabel] = React.useState("");
+    const  [setupForm, { loading: setupLoading, error: setupError, data: setupData }] = useMutation(APPLICATION_SETUP);
 
     const implementAddField = () => {
     
@@ -26,13 +29,12 @@ export default function index() {
         var inputElement = document.createElement('input')
         inputElement.className = "form-control"
         inputElement.setAttribute('type', field_type)
-  
+    
         getFormPreviewSection.appendChild(addElement)
         addElement.appendChild(formGroup)
         formGroup.appendChild(formLabel)
         addElement.appendChild(inputElement);
         formLabel.innerHTML = field_label
-  
     }
 
     const handleLabel = (event) => {
@@ -46,6 +48,21 @@ export default function index() {
         setfieldtype(target);
         console.log(fieldname)
     };
+
+    const submitFormSetup = async () => {
+        console.log( username, password,  'login======')
+        const login = await setupForm({variables: {
+          username: username,
+          password: password
+        }})
+      }
+      
+      // if(loginError){console.log(loginError, 'errooorrsss====')}
+      // if(loginLoading){console.log(loginLoading, 'loginloadinggsss====')}
+      if(setupData){
+        router.push('./admin/applicationSetup')
+        console.log(setupData, 'logindataaaaass====')
+      }
   
   return (
       <AdminLayout>

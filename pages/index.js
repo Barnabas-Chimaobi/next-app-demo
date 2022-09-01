@@ -33,6 +33,37 @@ export default function index() {
     console.log(loginData, 'logindataaaaass====')
   }
 
+
+  {/* <form action="">
+<div className="input-group input-group-lg mb-3">
+  <div className="input-group-prepend">
+  </div>
+  <div className="pt-3">
+      <div className="mt-4">
+      <input
+          type="text"
+          className="form-control bg-light"
+          id="inputRRR"
+          placeholder="Username"
+          onChange={(text) => setUsername(text.target.value)}
+      />
+      </div>
+      <div className="mt-3">
+      <input
+          type="text"
+          className="form-control bg-light"
+          id="inputRRR"
+          placeholder="Password"
+          onChange={(text) => setPassword(text.target.value)}
+      />
+      </div>
+  <div className="mt-5 mb-3">
+  <button
+      type="submit"
+      className="btn darkGreen btn-block"
+      style={{ width: "" }}
+      onClick={() => loginStaff()} */}
+
   return (
     <Frontlayout>
     <div>
@@ -71,8 +102,10 @@ export default function index() {
                   ]}
                 >
                   <Input
+                    className="form-control bg-light"
                     placeholder="Enter Username"
                     style={{ padding: "0.6em 1em", borderRadius: "5px" }}
+                    onChange={(text) => setUsername(text.target.value)}
                   />
                 </Form.Item>
               </div>
@@ -98,8 +131,10 @@ export default function index() {
                   ]}
                 >
                   <Input.Password
+                    className="form-control bg-light"
                     placeholder="Enter Password"
                     style={{ padding: "0.6em 1em", borderRadius: "5px" }}
+                    onChange={(text) => setPassword(text.target.value)}
                   />
                 </Form.Item>
               </div>
@@ -130,6 +165,8 @@ export default function index() {
                 style={{ backgroundColor: "#047735", fontSize: "15px" }}
                 className="btn text-white btn-block pt-3 pb-3"
                 type="submit"
+                onClick={() => loginStaff()}
+                
               >
                 Sign In
               </button>
