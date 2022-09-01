@@ -276,6 +276,49 @@ export default function Admission() {
                       Generate Receipt
                     </Text>
                   </Button>
+                  <Divider
+                    style={{ border: "1px solid #000000", height: "0px" }}
+                  />
+
+                  <Space>
+                    <Button
+                      style={{
+                        borderRadius: "100px",
+                        border: "1px solid #047735",
+                      }}>
+                      <Text
+                        style={{
+                          fontSize: "12px",
+                          fontWeight: 400,
+                          lineHeight: "14px",
+                          textTransform: "uppercase",
+
+                          color: "#047735",
+                        }}>
+                        HOSTEL REQUEST
+                      </Text>
+                    </Button>
+                    <Button
+                      style={{
+                        borderRadius: "100px",
+                        border: "1px solid #047735",
+                      }}>
+                      <Text
+                        style={{
+                          fontSize: "12px",
+                          fontWeight: 400,
+                          lineHeight: "14px",
+                          textTransform: "uppercase",
+                          // fontFamily: "Gilroy-Bold",
+                          color: "#047735",
+                        }}>
+                        HOSTEL INVOICE
+                      </Text>
+                    </Button>
+                  </Space>
+                  <Divider
+                    style={{ border: "1px solid #000000", height: "0px" }}
+                  />
                 </div>
               </Card>
             </div>
