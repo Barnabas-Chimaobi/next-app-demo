@@ -12,3 +12,9 @@ export const STAFF_LOGIN = gql`
      }
  }
 `
+export const SAVE_SESSION = gql`
+mutation saveSession($name: String!, $description: String!){
+    saveSession(name: $name, description: $description){
+    }
+}
+`
