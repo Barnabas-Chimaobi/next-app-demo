@@ -1,8 +1,60 @@
-import React from "react";
+import React, { useState } from "react";
 import Frontlayout from "../../Layouts/FrontLayout/frontlayout";
 import ProgressCard from "../Application/progressCard";
+import { gql, useQuery, useMutation, useLazyQuery } from "@apollo/client";
+import { SUBMIT_APPLICATION_FORM } from "../../api/mutations/adminMutation/index";
 
 export default function form() {
+  const [appForm, { loading: formLoading, error: fromError, data: formData }] =
+    useMutation(SUBMIT_APPLICATION_FORM);
+  const [responseDetails, setResponseDetails] = useState({
+    groupName: "",
+    key: "",
+    value: "",
+  });
+  const [olevelResultCombination, setOlevelResultCombination] = useState({
+    centerCode: "",
+    centerName: "",
+    examCode: "",
+    examNumber: "",
+    examYear: "",
+    olevelResultCombinationInput: {
+      grade: "",
+      gradeDesc: "",
+      subject: "",
+    },
+    olevelType: "",
+    olevelTypeId: "",
+    scannedCopyUrl: "",
+    scratchCardPin: "",
+  });
+  const [applicantAppliedCourseId, setApplicantAppliedCourseId] = useState();
+
+  const AppFormSubmit = async () => {
+    const submit = await appForm({
+      variables: {
+        responseDetails: { groupName, key, value },
+        olevelResultCombination: {
+          centerCode,
+          centerName,
+          examCode,
+          examNumber,
+          examYear,
+          olevelResultCombinationInput: {
+            grade,
+            gradeDesc,
+            subject,
+          },
+          olevelType,
+          olevelTypeId,
+          scannedCopyUrl,
+          scratchCardPin,
+        },
+        applicantAppliedCourseId,
+      },
+    });
+  };
+  console.log(formData);
   return (
     <Frontlayout>
       <div>
@@ -48,6 +100,11 @@ export default function form() {
                         type="text"
                         className="form-control bg-light"
                         id="inputOtherName"
+                        // onChange={(e) => {
+                        //   setOlevelResultCombination({
+                        //     centerCode: parseInt(e.target.value),
+                        //   });
+                        // }}
                       />
                     </div>
                     <div className="form-group col-lg-6">
