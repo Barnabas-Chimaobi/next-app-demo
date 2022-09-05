@@ -1,11 +1,11 @@
 import React from "react";
-import { Input, Typography, Button, Space, DatePicker } from "antd";
+import { Input, Typography, Button, Space } from "antd";
 import { Card, Form, Row, Col } from "react-bootstrap";
 import Frontlayout from "../../../Layouts/FrontLayout/frontlayout";
 
 const { Text } = Typography;
 
-export default function SaveSessionForm() {
+export default function AddDepartmentForm() {
   return (
     // <Frontlayout>
     <div
@@ -24,9 +24,9 @@ export default function SaveSessionForm() {
           padding: "74px 54px",
         }}
       >
-        <h3>Save Session</h3>
+        <h3>Add Department</h3>
         <Row>
-          <Col lg={12} xl={12} sm={6} style={{ marginBottom: "34px" }}>
+          <Col lg={6} xl={6} sm={6} style={{ marginBottom: "34px" }}>
             <Text
               style={{
                 fontFamily: "Gilroy-Medium",
@@ -43,31 +43,11 @@ export default function SaveSessionForm() {
               Name
             </Text>
             <Form.Select className="form-control">
-              <option selected>-- SELECT SESSION NAME-- </option>
+              <option selected>-- SELECT DEPARTMENT NAME-- </option>
               <option>TEXT</option>
               <option>EMAIL</option>
               <option>PASSWORD</option>
             </Form.Select>
-          </Col>
-
-          <Col lg={9} xl={6} sm={6} style={{ marginBottom: "34px" }}>
-            <Text
-              style={{
-                fontFamily: "Gilroy-Medium",
-                fontStyle: "normal",
-                fontWeight: 400,
-                fontSize: "14px",
-                lineHeight: "17px",
-
-                textTransform: "capitalize",
-
-                color: "#3E4851",
-              }}
-            >
-              Start Date
-            </Text>
-            {/* <DatePicker /> */}
-            <Form.Control type="date" />
           </Col>
           <Col lg={6} xl={6} sm={6} style={{ marginBottom: "34px" }}>
             <Text
@@ -83,9 +63,37 @@ export default function SaveSessionForm() {
                 color: "#3E4851",
               }}
             >
-              End Date
+              Faculty
             </Text>
-            <Form.Control type="date" />
+            <Form.Select className="form-control">
+              <option selected>--SELECT FACULTY</option>
+              <option>TEXT</option>
+              <option>EMAIL</option>
+              <option>PASSWORD</option>
+            </Form.Select>
+          </Col>
+          <Col lg={6} xl={6} sm={6} style={{ marginBottom: "34px" }}>
+            <Text
+              style={{
+                fontFamily: "Gilroy-Medium",
+                fontStyle: "normal",
+                fontWeight: 400,
+                fontSize: "14px",
+                lineHeight: "17px",
+
+                textTransform: "capitalize",
+
+                color: "#3E4851",
+              }}
+            >
+              Department Code
+            </Text>
+            <Form.Select className="form-control">
+              <option selected>--Select DEPARTMENT CODE--</option>
+              <option>TEXT</option>
+              <option>EMAIL</option>
+              <option>PASSWORD</option>
+            </Form.Select>
           </Col>
         </Row>
         <Space

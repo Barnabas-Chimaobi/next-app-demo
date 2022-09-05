@@ -7,6 +7,7 @@ import {
   HomeOutlined,
   // UserOutlined,
 } from "@ant-design/icons";
+import { FaSchool } from "react-icons/fa";
 import { Breadcrumb, Divider, Layout, Menu, Space, Typography } from "antd";
 import React, { useState } from "react";
 import { colors } from "../../utils/colors";
@@ -99,7 +100,8 @@ const items = [
       <Link
         href="#"
         color="white"
-        style={{ fontSize: "12px", color: "#FFFFFF" }}>
+        style={{ fontSize: "12px", color: "#FFFFFF" }}
+      >
         <Text style={{ color: "white" }}>Admission</Text>
       </Link>
     ),
@@ -112,6 +114,17 @@ const items = [
       </Link>
     ),
     icon: <TeamOutlined width={25} height={19.44} />,
+  },
+  {
+    label: (
+      <Link
+        href="/admin/schoolSetUp"
+        style={{ fontSize: "12px", color: "#FFFFFF" }}
+      >
+        <Text style={{ color: "white" }}>Setup School</Text>
+      </Link>
+    ),
+    icon: <FaSchool width={25} height={19.44} />,
   },
 ];
 
@@ -131,7 +144,8 @@ const AdminLayout = ({ children }) => {
         {
           // minHeight: "100vh",
         }
-      }>
+      }
+    >
       <Sider
         className="side-menu"
         style={{
@@ -145,7 +159,8 @@ const AdminLayout = ({ children }) => {
         collapsedWidth={0}
         collapsed={collapsed}
         width="230px"
-        onCollapse={(value) => setCollapsed(value)}>
+        onCollapse={(value) => setCollapsed(value)}
+      >
         <div className="container">
           <Space style={{ padding: "12px" }}>
             <img src="../../vector.png" width={22} height={20} />
@@ -182,13 +197,15 @@ const AdminLayout = ({ children }) => {
           style={{
             // margin: "0 16px",
             backgroundColor: colors.ashGrayBg,
-          }}>
+          }}
+        >
           {children}
         </Content>
         <Footer
           style={{
             textAlign: "center",
-          }}>
+          }}
+        >
           Ant Design ©2018 Created by Ant UED
         </Footer>
       </Layout>

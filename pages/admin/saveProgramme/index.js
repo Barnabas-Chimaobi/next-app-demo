@@ -5,13 +5,13 @@ import Frontlayout from "../../../Layouts/FrontLayout/frontlayout";
 
 const { Text } = Typography;
 
-export default function index() {
+export default function SAVEPROGRAMMEFORM() {
   return (
-    <Frontlayout>
+    // <Frontlayout>
       <div
-        style={{
-          padding: "4em 4em",
-        }}
+        // style={{
+        //   padding: "4em 4em",
+        // }}
         // className="card container"
       >
         <Card
@@ -98,6 +98,6 @@ export default function index() {
           </Space>
         </Card>
       </div>
-    </Frontlayout>
+    // </Frontlayout>
   );
 }
