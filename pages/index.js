@@ -26,8 +26,8 @@ export default function index() {
     }})
   }
   
-  // if(loginError){console.log(loginError, 'errooorrsss====')}
-  // if(loginLoading){console.log(loginLoading, 'loginloadinggsss====')}
+  if(loginError){console.log(loginError, 'errooorrsss====')}
+  if(loginLoading){console.log(loginLoading, 'loginloadinggsss====')}
   if(loginData){
     router.push('./admin/applicationSetup')
     console.log(loginData, 'logindataaaaass====')
@@ -82,15 +82,14 @@ export default function index() {
             >
               Sign in
             </h3>
-
-            <form action="">
+            <Form>
+            {/* <form action=""> */}
               <div className="input-group input-group-lg mb-3">
                 <div className="input-group-prepend">
                   {/* <!-- <span class="input-group-text" id="inputGroup-sizing-default"
                   >Default</span
                  > --> */}
                 </div>
-
                 <Form.Item
                   style={{ paddingLeft: "", width: "98%" }}
                   name="text"
@@ -190,7 +189,8 @@ export default function index() {
                   <label className="text-dark pt-4">Forget Password?</label>
                 </Link>
               </div>
-            </form>
+            {/* </form> */}
+            </Form>
           </div>
 
           <div class="col-lg-6 col-sm-12 pl-5">

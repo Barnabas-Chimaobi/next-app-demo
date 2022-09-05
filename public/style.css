@@ -124,7 +124,7 @@ header{
 .stepNumber{
     width: 28px;
     height: 29px;
-    font-size: 24px;
+    font-size: 20px;
 }
 .lightYellow{
     color: var(--LightYellow);

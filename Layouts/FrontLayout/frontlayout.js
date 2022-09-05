@@ -1,13 +1,17 @@
-import React from 'react'
-import { Navbar } from "../../components/nav"
+import React from "react";
+import { Navbar } from "../../components/nav";
+import NewNav from "../../components/newNav";
+import { SSRProvider } from "react-bootstrap";
 
-export default function frontlayout({ children }) {
+export default function Frontlayout({ children }) {
+  // getLayout
   return (
-    <>
-      <Navbar />
-      <main>
-        {children}
-      </main>
-    </>
-  )
+    // <SSRProvider>
+
+    <div style={{ fontFamily: "Montserrat" }}>
+      <NewNav />
+      <main>{children}</main>
+    </div>
+    // </SSRProvider>
+  );
 }

@@ -3,7 +3,7 @@ import { AdminLayout } from '../../../Layouts/adminLayout/adminLayout'
 import { Breadcrumb, Layout, Menu } from 'antd';
 import { colors } from '../../../utils/colors';
 import { useDispatch, useSelector } from 'react-redux'
-import { APPLICATION_SETUP } from '../../../api/mutations/adminMutation';
+import { SAVE_DYNAMIC_FORM_SETUP } from '../../../api/mutations/adminMutation';
 import { useMutation } from '@apollo/client';
 const { Header, Content, Footer, Sider } = Layout;
 
@@ -11,7 +11,7 @@ export default function index() {
     let [fieldname, setfieldname] = React.useState("");
     let [field_type, setfieldtype] = React.useState("");
     let [field_label, setfieldlabel] = React.useState("");
-    const  [setupForm, { loading: setupLoading, error: setupError, data: setupData }] = useMutation(APPLICATION_SETUP);
+    const  [setupForm, { loading: setupLoading, error: setupError, data: setupData }] = useMutation(SAVE_DYNAMIC_FORM_SETUP);
 
     const implementAddField = () => {
     
@@ -52,8 +52,23 @@ export default function index() {
     const submitFormSetup = async () => {
         console.log( username, password,  'login======')
         const login = await setupForm({variables: {
-          username: username,
-          password: password
+           model: {
+            active: '',
+            createdOn: '',
+            fieldDetails: {
+               input_type: '',
+               label: '',
+               name: '',
+               required: '',
+               sectionTitle: ''
+            },
+            programmeId: '',
+            session: {
+                
+            },
+            sessionId: '',
+            userId: ''
+           }
         }})
       }
       
