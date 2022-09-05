@@ -28,7 +28,6 @@ export default function Admission() {
                   fontFamily: "Montserrat",
                   fontSize: "32px",
                   // line-height: 38px;
-
                   color: "#474747",
                 }}>
                 Admission

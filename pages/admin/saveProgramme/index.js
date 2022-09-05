@@ -1,7 +1,7 @@
 import React from "react";
 import { Input, Typography, Button, Space } from "antd";
 import { Card, Form, Row, Col } from "react-bootstrap";
-import Frontlayout from "../../Layouts/FrontLayout/frontlayout";
+import Frontlayout from "../../../Layouts/FrontLayout/frontlayout";
 
 const { Text } = Typography;
 
@@ -24,7 +24,7 @@ export default function index() {
             padding: "74px 54px",
           }}
         >
-          <h3>Save Department</h3>
+          <h3>Save Programme</h3>
           <Row>
             <Col lg={6} xl={6} sm={6} style={{ marginBottom: "34px" }}>
               <Text
@@ -43,7 +43,7 @@ export default function index() {
                 Name
               </Text>
               <Form.Select className="form-control">
-                <option selected>-- SELECT DEPARTMENT NAME-- </option>
+                <option selected>-- SELECT PROGRAMME NAME-- </option>
                 <option>TEXT</option>
                 <option>EMAIL</option>
                 <option>PASSWORD</option>
@@ -65,7 +65,11 @@ export default function index() {
               >
                 Description
               </Text>
-              <Form.Control as="textarea" placeholder="ADD DESCRIPTION" className="pt-4 pb-4" />
+              <Form.Control
+                as="textarea"
+                placeholder="ADD DESCRIPTION"
+                className="pt-4 pb-4"
+              />
             </Col>
           </Row>
           <Space

@@ -1,7 +1,7 @@
 import React from "react";
 import { Input, Typography, Button, Space } from "antd";
 import { Card, Form, Row, Col } from "react-bootstrap";
-import Frontlayout from "../../Layouts/FrontLayout/frontlayout";
+import Frontlayout from "../../../Layouts/FrontLayout/frontlayout";
 
 const { Text } = Typography;
 
@@ -24,7 +24,7 @@ export default function index() {
             padding: "74px 54px",
           }}
         >
-          <h3>Save Programme</h3>
+          <h3>Save Department</h3>
           <Row>
             <Col lg={6} xl={6} sm={6} style={{ marginBottom: "34px" }}>
               <Text
@@ -43,7 +43,7 @@ export default function index() {
                 Name
               </Text>
               <Form.Select className="form-control">
-                <option selected>-- SELECT SESSION NAME-- </option>
+                <option selected>-- SELECT DEPARTMENT NAME-- </option>
                 <option>TEXT</option>
                 <option>EMAIL</option>
                 <option>PASSWORD</option>
@@ -63,37 +63,9 @@ export default function index() {
                   color: "#3E4851",
                 }}
               >
-                Faculty
+                Description
               </Text>
-              <Form.Select className="form-control">
-                <option selected>--SELECT FACULTY</option>
-                <option>TEXT</option>
-                <option>EMAIL</option>
-                <option>PASSWORD</option>
-              </Form.Select>
-            </Col>
-            <Col lg={6} xl={6} sm={6} style={{ marginBottom: "34px" }}>
-              <Text
-                style={{
-                  fontFamily: "Gilroy-Medium",
-                  fontStyle: "normal",
-                  fontWeight: 400,
-                  fontSize: "14px",
-                  lineHeight: "17px",
-
-                  textTransform: "capitalize",
-
-                  color: "#3E4851",
-                }}
-              >
-                Department Code
-              </Text>
-              <Form.Select className="form-control">
-                <option selected>--Select DEPARTMENT CODE--</option>
-                <option>TEXT</option>
-                <option>EMAIL</option>
-                <option>PASSWORD</option>
-              </Form.Select>
+              <Form.Control as="textarea" placeholder="ADD DESCRIPTION" className="pt-4 pb-4" />
             </Col>
           </Row>
           <Space

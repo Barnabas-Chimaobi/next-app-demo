@@ -1,17 +1,5 @@
 import { gql, useMutation } from '@apollo/client';
 
-export const APPLICATION_SETUP = gql`
- mutation staffLogin($username: String!, $password: String!){
-     staffLogin(username: $username, password: $password){
-        userId,
-        username,
-        role,
-        authToken,
-        fullName,
-        passportUrl
-     }
- }
-`
 export const DELETE_ABILITY = gql`
  mutation deleteAbility($id: int!){
      deleteAbility(id: $id){
@@ -178,5 +166,13 @@ mutation updateDepartment($id: Int!, $name: String!, $faculty: FacultyInput!){
     updateDepartment(id:$id, name: $name, faculty: $faculty){
         id
     }
+}
+`
+export const SAVE_DYNAMIC_FORM_SETUP = gql`
+mutation saveDynamicFormSetup($model: ApplicationFormDynamicSetupDtoInput!){
+    saveDynamicFormSetup(model: $model){
+    active, 
+    createdOn
+  }
 }
 `
