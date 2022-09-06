@@ -59,7 +59,7 @@ export default function index() {
                   lineHeight: "17px",
 
                   textTransform: "capitalize",
-
+                  
                   color: "#3E4851",
                 }}
               >
