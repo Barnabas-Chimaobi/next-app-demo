@@ -22,6 +22,7 @@ export default function index() {
   const [password, setPassword] = useState("");
 
   const loginStaff = async () => {
+<<<<<<< HEAD
     console.log(username, password, "login======");
     const login = await staffLogin({
       variables: {
@@ -36,6 +37,20 @@ export default function index() {
   if (loginData) {
     router.push("./admin/applicationSetup");
     console.log(loginData, "logindataaaaass====");
+=======
+    console.log( username, password,  'login======')
+    const login = await staffLogin({variables: {
+      username: username,
+      password: password
+    }})
+  }
+  
+  if(loginError){console.log(loginError, 'errooorrsss====')}
+  if(loginLoading){console.log(loginLoading, 'loginloadinggsss====')}
+  if(loginData){
+    router.push('./admin/applicationSetup')
+    console.log(loginData, 'logindataaaaass====')
+>>>>>>> 9653ebd019274388f0aac9af9c0c619f39050c55
   }
 
   {
@@ -79,6 +94,7 @@ export default function index() {
           <link rel="icon" href="/favicon.ico" />
         </Head>
 
+<<<<<<< HEAD
         <div className="container">
           <div className="row" style={{ height: "100vh" }}>
             <div className="col-lg-6 col-sm-12 card-1">
@@ -92,6 +108,22 @@ export default function index() {
                 <div className="input-group input-group-lg mb-3">
                   <div className="input-group-prepend">
                     {/* <!-- <span class="input-group-text" id="inputGroup-sizing-default"
+=======
+      <div className="container">
+        <div className="row" style={{ height: "100vh" }}>
+          <div className="col-lg-6 col-sm-12 card-1">
+            <h3
+              className="justify-content-center"
+              style={{ marginTop: "10em", marginBottom: "3rem" }}
+            >
+              Sign in
+            </h3>
+            <Form>
+            {/* <form action=""> */}
+              <div className="input-group input-group-lg mb-3">
+                <div className="input-group-prepend">
+                  {/* <!-- <span class="input-group-text" id="inputGroup-sizing-default"
+>>>>>>> 9653ebd019274388f0aac9af9c0c619f39050c55
                   >Default</span
                  > --> */}
                   </div>
@@ -113,10 +145,35 @@ export default function index() {
                     />
                   </Form.Item>
                 </div>
+<<<<<<< HEAD
 
                 <div className="input-group input-group-lg mb-3">
                   <div className="input-group-prepend">
                     {/* <!-- <span class="input-group-text" id="inputGroup-sizing-lg"
+=======
+                <Form.Item
+                  style={{ paddingLeft: "", width: "98%" }}
+                  name="text"
+                  rules={[
+                    {
+                      required: true,
+                      message: "Please input your username!",
+                    },
+                  ]}
+                >
+                  <Input
+                    className="form-control bg-light"
+                    placeholder="Enter Username"
+                    style={{ padding: "0.6em 1em", borderRadius: "5px" }}
+                    onChange={(text) => setUsername(text.target.value)}
+                  />
+                </Form.Item>
+              </div>
+
+              <div className="input-group input-group-lg mb-3">
+                <div className="input-group-prepend">
+                  {/* <!-- <span class="input-group-text" id="inputGroup-sizing-lg"
+>>>>>>> 9653ebd019274388f0aac9af9c0c619f39050c55
                   >Default</span
                 */}
                   </div>
@@ -145,6 +202,7 @@ export default function index() {
                 <div
                   clasName="form-check"
                   style={{
+<<<<<<< HEAD
                     paddingLeft: "1rem",
                     paddingBottom: "2rem",
                     alignItem: "center",
@@ -154,6 +212,32 @@ export default function index() {
                     type="checkbox"
                     value=""
                     id="flexCheckDefault"
+=======
+                    alignSelf: "center",
+                    textAlign: "center",
+                    paddingTop: "2rem",
+                  }}
+                >
+                  <label className="text-dark pt-4">Forget Password?</label>
+                </Link>
+              </div>
+            {/* </form> */}
+            </Form>
+          </div>
+
+          <div class="col-lg-6 col-sm-12 pl-5">
+            <div
+              class="card card-2 mt-5"
+              style={{ backgroundColor: "#cfb127" }}
+            >
+              <p class="text-center text-white mt-4"></p>
+              <center>
+                <div className="justify-content-center mt-5">
+                  <img
+                    style={{ width: "500px" }}
+                    src="../../Lottie/StudentLottie.PNG"
+                    alt="image of a floating student"
+>>>>>>> 9653ebd019274388f0aac9af9c0c619f39050c55
                   />
                   <label
                     className="form-check-label text-dark pl-2"

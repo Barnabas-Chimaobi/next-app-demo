@@ -7,13 +7,10 @@ import { SUBMIT_APPLICATION_FORM } from "../../api/mutations/adminMutation/index
 export default function form() {
   const [appForm, { loading: formLoading, error: fromError, data: formData }] =
     useMutation(SUBMIT_APPLICATION_FORM);
-  const [responseDetails, setResponseDetails] = useState({
-    groupName: "",
-    key: "",
-    value: "",
-  });
-  const [olevelResultCombination, setOlevelResultCombination] = useState({
-    centerCode: "",
+  const [groupName, setgroupName] = useState("");
+  const [key, setKey] = useState("");
+  const [value, setValue] = useState("");
+  const [centerCode, setcenterCode] = useState({
     centerName: "",
     examCode: "",
     examNumber: "",
@@ -33,9 +30,13 @@ export default function form() {
   const AppFormSubmit = async () => {
     const submit = await appForm({
       variables: {
-        responseDetails: { groupName, key, value },
+        responseDetails: {
+          groupName: groupName,
+          key: key,
+          value: value,
+        },
         olevelResultCombination: {
-          centerCode,
+          centerCode: "",
           centerName,
           examCode,
           examNumber,
@@ -55,6 +56,10 @@ export default function form() {
     });
   };
   console.log(formData);
+
+  const getInput = (text) => {
+    setgroupName(text);
+  };
   return (
     <Frontlayout>
       <div>
@@ -81,6 +86,9 @@ export default function form() {
                         className="form-control bg-light"
                         id="inputSurname"
                         placeholder="ADELEKE"
+                        onChange={(text) => {
+                          getInput(text.target.value);
+                        }}
                       />
                     </div>
                     <div className="form-group col-lg-6">
@@ -90,6 +98,7 @@ export default function form() {
                         className="form-control bg-light"
                         id="inputCourse"
                         placeholder="DEBORAH"
+                        onChange={(text) => setgroupName(text.target.value)}
                       />
                     </div>
                   </div>
