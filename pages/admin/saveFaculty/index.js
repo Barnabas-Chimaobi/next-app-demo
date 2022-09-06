@@ -1,11 +1,27 @@
-import React from "react";
+import React, {useState} from "react";
 import { Input, Typography, Button, Space } from "antd";
 import { Card, Form, Row, Col } from "react-bootstrap";
 import Frontlayout from "../../../Layouts/FrontLayout/frontlayout";
+import { SAVE_FACULTY } from "../../../api/mutations/adminMutation";
+import { useMutation } from "@apollo/client";
 
 const { Text } = Typography;
 
 export default function SaveFacultyForm() {
+  const  [saveFaculty, { loading: facultyLoading, error: facultyError, data: facultyData }] = useMutation(SAVE_FACULTY);
+  const [facultyName, setFacultyName] = useState('')
+  const [descriptions, setDescription] = useState('')
+
+  const submitFaculty = async () => {
+    const dept = await saveFaculty({variables: {
+      name: facultyName,
+      description: descriptions
+    }})
+    console.log(dept.data, 'consolledddept======')
+  }
+
+      if(facultyError){ console.log(JSON.stringify(facultyError, null, 2), 'errormutatiincoureseee==sssss=====') }
+      if(facultyLoading){console.log(facultyLoading, 'loginloadinggsss====')}
   return (
     // <Frontlayout>
     <div
@@ -42,7 +58,7 @@ export default function SaveFacultyForm() {
             >
               Name
             </Text>
-            <Form.Select className="form-control">
+            <Form.Select onChange={(name) => {setFacultyName(name.target.name)}} className="form-control">
               <option selected>-- SELECT FACULTY NAME-- </option>
               <option>TEXT</option>
               <option>EMAIL</option>
@@ -66,6 +82,7 @@ export default function SaveFacultyForm() {
               Description
             </Text>
             <Form.Control
+              onChange={(name) => {setDescription(name.target.name)}}
               as="textarea"
               placeholder="ADD DESCRIPTION"
               className="pt-4 pb-4"
@@ -79,7 +96,7 @@ export default function SaveFacultyForm() {
             alignItems: "flex-end",
           }}
         >
-          <Button style={{ background: "#047735", borderRadius: "5px" }}>
+          <Button onClick={() => submitFaculty()} style={{ background: "#047735", borderRadius: "5px" }}>
             <Text
               style={{
                 fontFamily: "Gilroy-Medium",

@@ -64,8 +64,8 @@ mutation saveApplicationFormNumberSetup($name: String!){
 }
 `
 export const SAVE_DEPARTMENT = gql`
- mutation saveAbility($name: String!, $faculty: FacultyInput!, $deptCode: String!){
-    saveAbility(name: $name, faculty: $faculty, deptCode: $deptCode){
+ mutation saveDepartment($name: String!, $faculty: FacultyInput!, $deptCode: String!){
+    saveDepartment(name: $name, faculty: $faculty, deptCode: $deptCode){
         id
     }
 }
@@ -79,7 +79,7 @@ mutation saveDepartmentOption($name: String!){
 `
 export const SAVE_FACULTY = gql`
 mutation saveFaculty($name: String!, $description: String!){
-    saveFaculty(name: $name){
+    saveFaculty(name: $name, description: $description){
         id
     }
 }
@@ -87,7 +87,9 @@ mutation saveFaculty($name: String!, $description: String!){
 export const SAVE_PROGRAMME = gql`
 mutation saveProgramme($name: String!, $description: String!){
     saveProgramme(name: $name, description: $description){
-        id
+        id,
+        name,
+        description
     }
 }
 `

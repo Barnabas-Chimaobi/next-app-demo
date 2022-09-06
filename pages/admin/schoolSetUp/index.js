@@ -15,6 +15,10 @@ const { Text } = Typography;
 export default function Index() {
   // AddDepartmentModal
   const [show, setShow] = useState(false);
+  const [Reveal, setReveal] = useState(false);
+  const [disclose, setdisclose] = useState(false);
+  const [display, setdisplay] = useState(false);
+  const [Open, setOpen] = useState(false);
 
   const handleShow = () => setShow(!show);
 
@@ -22,7 +26,6 @@ export default function Index() {
 
   // SaveDepartmentModal
 
-  const [Reveal, setReveal] = useState(false);
 
   const handleReveal = () => setReveal(!Reveal);
 
@@ -30,7 +33,6 @@ export default function Index() {
 
   // SaveFacultyModal
 
-  const [display, setdisplay] = useState(false);
 
   const handledisplay = () => setdisplay(!display);
 
@@ -38,15 +40,12 @@ export default function Index() {
 
   // SaveProgrammeModal
 
-  const [disclose, setdisclose] = useState(false);
 
   const handledisclose = () => setdisclose(!disclose);
 
   // SaveProgrammeModalEnd
 
   // SaveSessionModal
-
-  const [Open, setOpen] = useState(false);
 
   const handleOpen = () => setOpen(!Open);
 

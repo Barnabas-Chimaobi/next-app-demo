@@ -1,11 +1,28 @@
-import React from "react";
+import React, {useState} from "react";
 import { Input, Typography, Button, Space } from "antd";
 import { Card, Form, Row, Col } from "react-bootstrap";
 import Frontlayout from "../../../Layouts/FrontLayout/frontlayout";
+import { SAVE_DEPARTMENT } from "../../../api/mutations/adminMutation";
+import { useMutation } from '@apollo/client';
 
 const { Text } = Typography;
 
-export default function SaveDepartmentForm() {
+export default function SaveDepartmentForm(props) {
+  const  [saveDept, { loading: deptLoading, error: deptError, data: deptData }] = useMutation(SAVE_DEPARTMENT);
+  const [deptName, setDeptName] = useState('')
+  const [description, setDescription] = useState('')
+
+  const submitDepartment = async () => {
+    const dept = await saveDept({variables: {
+      name: deptName,
+      faculty: [],
+      code: 'dghjklasdhakj'
+    }})
+    console.log(dept.data, 'consolledddept======')
+  }
+
+      if(deptError){ console.log(JSON.stringify(deptError, null, 2), 'errormutatiincoureseee==sssss=====') }
+      if(deptLoading){console.log(deptLoading, 'loginloadinggsss====')}
   return (
     // <Frontlayout>
     <div
@@ -42,7 +59,7 @@ export default function SaveDepartmentForm() {
             >
               Name
             </Text>
-            <Form.Select className="form-control">
+            <Form.Select onChange={(name) => {setDeptName(name.target.name)}} className="form-control">
               <option selected>-- SELECT DEPARTMENT NAME-- </option>
               <option>TEXT</option>
               <option>EMAIL</option>
@@ -66,6 +83,7 @@ export default function SaveDepartmentForm() {
               Description
             </Text>
             <Form.Control
+              onChange={(name) => {setDescription(name.target.name)}}
               as="textarea"
               placeholder="ADD DESCRIPTION"
               className="pt-4 pb-4"
@@ -79,7 +97,7 @@ export default function SaveDepartmentForm() {
             alignItems: "flex-end",
           }}
         >
-          <Button style={{ background: "#047735", borderRadius: "5px" }}>
+          <Button onClick={() => submitDepartment()} style={{ background: "#047735", borderRadius: "5px" }}>
             <Text
               style={{
                 fontFamily: "Gilroy-Medium",

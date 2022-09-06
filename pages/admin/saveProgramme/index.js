@@ -1,11 +1,28 @@
-import React from "react";
+import React, {useState} from "react";
 import { Input, Typography, Button, Space } from "antd";
 import { Card, Form, Row, Col } from "react-bootstrap";
 import Frontlayout from "../../../Layouts/FrontLayout/frontlayout";
+import { useMutation } from "@apollo/client";
+import { SAVE_PROGRAMME } from "../../../api/mutations/adminMutation";
 
 const { Text } = Typography;
 
 export default function SAVEPROGRAMMEFORM() {
+
+  const  [saveProgramme, { loading:  programmeLoading, error: programmeError, data: programmeData }] = useMutation(SAVE_PROGRAMME);
+  const [programmeName, setProgrammeName] = useState('')
+  const [descriptions, setDescription] = useState('')
+
+  const submitProgramme = async () => {
+    const dept = await saveProgramme({variables: {
+      name: programmeName,
+      description: descriptions
+    }})
+    console.log(dept.data, 'consolledddept======')
+  }
+
+      if(programmeError){ console.log(JSON.stringify(programmeError, null, 2), 'errormutatiincoureseee==sssss=====') }
+      if(programmeLoading){console.log(programmeLoading, 'loginloadinggsss====')}
   return (
     // <Frontlayout>
       <div
@@ -79,7 +96,7 @@ export default function SAVEPROGRAMMEFORM() {
               alignItems: "flex-end",
             }}
           >
-            <Button style={{ background: "#047735", borderRadius: "5px" }}>
+            <Button onClick={() => submitProgramme()} style={{ background: "#047735", borderRadius: "5px" }}>
               <Text
                 style={{
                   fontFamily: "Gilroy-Medium",
