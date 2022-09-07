@@ -9,7 +9,8 @@ export default function index() {
         <div
           // <<<<<<< HEAD
           className="d-block d-lg-flex container mt-3 mb-3"
-          style={{ fontFamily: "Montserrat" }}></div>
+          style={{ fontFamily: "Montserrat" }}>
+        </div>
         <div className="container d-block d-lg-flex">
           <div
             className="card col-lg-8 col-sm-12"

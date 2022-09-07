@@ -246,8 +246,8 @@ export default function personDetails() {
                 </div>
               </div>
               <div className="form-row">
-                <div className="form-group col-lg-6 col-sm-6">
-                  <label htmlFor="inputSex">Disability</label>
+                <div className="form-group col-lg-6">
+                  
                   <Text
                         style={{
                         fontFamily: "Gilroy-ExtraBold",
@@ -274,7 +274,7 @@ export default function personDetails() {
                         <option>..</option>
                   </Form.Select>
                 </div>
-                <div className="form-group col-lg-6 col-sm-6">
+                <div className="form-group col-lg-6">
                   <Text
                         style={{
                         fontFamily: "Gilroy-ExtraBold",
@@ -293,7 +293,7 @@ export default function personDetails() {
                 </div>
               </div>
               <div className="form-row">
-                <div className="form-group col-lg-6 col-sm-6">
+                <div className="form-group col-lg-6">
                   <Text
                         style={{
                         fontFamily: "Gilroy-ExtraBold",
@@ -310,7 +310,7 @@ export default function personDetails() {
                     id="inputOtherName"
                   />
                 </div>
-                <div className="form-group col-lg-6 col-sm-6">
+                <div className="form-group col-lg-6">
                   <Text
                         style={{
                         fontFamily: "Gilroy-ExtraBold",
@@ -320,7 +320,7 @@ export default function personDetails() {
                       }}
                     >
                       Upload Passport (click below to select a passport photo)
-                  </Text>
+                  </Text> <br />
                   <input
                     type="file"
                     name="myImage"
@@ -332,8 +332,7 @@ export default function personDetails() {
                 <strong>NEXT OF KIN</strong>
               </h5>
               <div className="form-row">
-                <div className="form-group col-lg-6 col-sm-6">
-                  <label htmlFor="inputSurname">Next of Kin Name</label>
+                <div className="form-group col-lg-6"> 
                   <Text
                         style={{
                         fontFamily: "Gilroy-ExtraBold",
@@ -350,7 +349,7 @@ export default function personDetails() {
                     id="inputSurname"
                   />
                 </div>
-                <div className="form-group col-lg-6 col-sm-6">
+                <div className="form-group col-lg-6">
                   <Text
                         style={{
                         fontFamily: "Gilroy-ExtraBold",
@@ -369,8 +368,8 @@ export default function personDetails() {
                 </div>
               </div>
               <div className="form-row">
-                <div className="form-group col-lg-6 col-sm-6">
-                  <label htmlFor="inputSex">Relationship</label>
+                <div className="form-group col-lg-6">
+                  
                   <Text
                         style={{
                         fontFamily: "Gilroy-ExtraBold",
@@ -398,7 +397,7 @@ export default function personDetails() {
                         <option>..</option>
                   </Form.Select>
                 </div>
-                <div className="form-group col-lg-6 col-sm-6">
+                <div className="form-group col-lg-6">
                   <Text
                         style={{
                         fontFamily: "Gilroy-ExtraBold",
