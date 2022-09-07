@@ -1,55 +1,52 @@
 import React from "react";
+import { Form } from "react-bootstrap";
+import { Typography } from "antd";
+// const { Option } = Select;
+const { Text } = Typography;
 
-export default function olevel(props) {
+export default function olevel() {
   return (
     <div>
-      <div
-        style={{ border: "none" }}
-        className="row card col-sm-12 col-lg-12  pb-4 pt-4">
+      <div className="row card col-sm-12 col-lg-12  pb-4 pt-4">
         <div className="row">
           <div className="col-lg-6">
-            <form>
+            <Form>
               <h4>FIRST SITTING</h4>
               <div className="form-row">
                 <div className="form-group">
-                  <label htmlFor="inputSex">Type</label>
-                  <select
-                    id="inputCourse"
-                    className="form-control"
-                    onChange={props.oleveltype}>
-                    <option selected>SELECT EXAM TYPE</option>
+                  <Text
+                    style={{
+                      fontFamily: "Gilroy-ExtraBold",
+                      fontStyle: "normal",
+                      fontWeight: "400",
+                      fontSize: "20px",
+                    }}>
+                    Type
+                  </Text>
+                  <Form.Select id="" className="form-control">
+                    <option
+                      selected
+                      style={{
+                        fontSize: "16px",
+                      }}>
+                      SELECT EXAM TYPE
+                    </option>
                     <option>..</option>
-                    <option>...</option>
-                  </select>
-                </div>
-              </div>
-              <div className="form-row">
-                <div className="form-group">
-                  <label htmlFor="inputCourse">Exam No.</label>
-                  <input
-                    type="text"
-                    className="form-control"
-                    id="inputCourse"
-                    onChange={props.examNumber}
-                  />
-                </div>
-              </div>
-              <div className="form-row">
-                <div className="form-group">
-                  <label htmlFor="inputSex">Exam Year</label>
-                  <select
-                    id="inputCourse"
-                    className="form-control"
-                    onChange={props.examYear}>
-                    <option selected>SELECT YEAR</option>
                     <option>..</option>
-                    <option>...</option>
-                  </select>
+                  </Form.Select>
                 </div>
               </div>
               <div className="form-row">
                 <div className="form-group">
-                  <label htmlFor="inputCourse">Scratch Card Pin</label>
+                  <Text
+                    style={{
+                      fontFamily: "Gilroy-ExtraBold",
+                      fontStyle: "normal",
+                      fontWeight: "400",
+                      fontSize: "20px",
+                    }}>
+                    Exam No.
+                  </Text>
                   <input
                     type="text"
                     className="form-control"
@@ -57,24 +54,88 @@ export default function olevel(props) {
                   />
                 </div>
               </div>
-            </form>
+              <div className="form-row">
+                <div className="form-group">
+                  <Text
+                    style={{
+                      fontFamily: "Gilroy-ExtraBold",
+                      fontStyle: "normal",
+                      fontWeight: "400",
+                      fontSize: "20px",
+                    }}>
+                    Exam Year
+                  </Text>
+                  <Form.Select id="" className="form-control">
+                    <option
+                      selected
+                      style={{
+                        fontSize: "16px",
+                      }}>
+                      SELECT YEAR
+                    </option>
+                    <option>..</option>
+                    <option>..</option>
+                  </Form.Select>
+                </div>
+              </div>
+              <div className="form-row">
+                <div className="form-group">
+                  <Text
+                    style={{
+                      fontFamily: "Gilroy-ExtraBold",
+                      fontStyle: "normal",
+                      fontWeight: "400",
+                      fontSize: "20px",
+                    }}>
+                    Scratch Card Pin
+                  </Text>
+                  <input
+                    type="text"
+                    className="form-control"
+                    id="inputCourse"
+                  />
+                </div>
+              </div>
+            </Form>
           </div>
           <div className="col-lg-6">
-            <form>
+            <Form>
               <h4>FIRST SITTING</h4>
               <div className="form-row">
                 <div className="form-group">
-                  <label htmlFor="inputSex">Type</label>
-                  <select id="inputCourse" className="form-control">
-                    <option selected>SELECT EXAM TYPE</option>
+                  <Text
+                    style={{
+                      fontFamily: "Gilroy-ExtraBold",
+                      fontStyle: "normal",
+                      fontWeight: "400",
+                      fontSize: "20px",
+                    }}>
+                    Type
+                  </Text>
+                  <Form.Select id="" className="form-control">
+                    <option
+                      selected
+                      style={{
+                        fontSize: "16px",
+                      }}>
+                      SELECT EXAM TYPE
+                    </option>
                     <option>..</option>
-                    <option>...</option>
-                  </select>
+                    <option>..</option>
+                  </Form.Select>
                 </div>
               </div>
               <div className="form-row">
                 <div className="form-group">
-                  <label htmlFor="inputCourse">Exam No.</label>
+                  <Text
+                    style={{
+                      fontFamily: "Gilroy-ExtraBold",
+                      fontStyle: "normal",
+                      fontWeight: "400",
+                      fontSize: "20px",
+                    }}>
+                    Exam No.
+                  </Text>
                   <input
                     type="text"
                     className="form-control"
@@ -84,26 +145,47 @@ export default function olevel(props) {
               </div>
               <div className="form-row">
                 <div className="form-group">
-                  <label htmlFor="inputSex">Exam Year</label>
-                  <select id="inputCourse" className="form-control">
-                    <option selected>SELECT YEAR</option>
+                  <Text
+                    style={{
+                      fontFamily: "Gilroy-ExtraBold",
+                      fontStyle: "normal",
+                      fontWeight: "400",
+                      fontSize: "20px",
+                    }}>
+                    Exam Year
+                  </Text>
+                  <Form.Select id="" className="form-control">
+                    <option
+                      selected
+                      style={{
+                        fontSize: "16px",
+                      }}>
+                      SELECT EXAM YEAR
+                    </option>
                     <option>..</option>
-                    <option>...</option>
-                  </select>
+                    <option>..</option>
+                  </Form.Select>
                 </div>
               </div>
               <div className="form-row">
                 <div className="form-group">
-                  <label htmlFor="inputCourse">Scratch Card Pin</label>
+                  <Text
+                    style={{
+                      fontFamily: "Gilroy-ExtraBold",
+                      fontStyle: "normal",
+                      fontWeight: "400",
+                      fontSize: "20px",
+                    }}>
+                    Scratch Card Pin
+                  </Text>
                   <input
                     type="text"
                     className="form-control"
                     id="inputCourse"
-                    onChange={props.scratchcard}
                   />
                 </div>
               </div>
-            </form>
+            </Form>
           </div>
         </div>
         <div className="row">
@@ -112,180 +194,288 @@ export default function olevel(props) {
               <div className="col-lg-6 bg-light">
                 <div className="row">
                   <div className="col-lg-6">
-                    <form className>
+                    <Form>
                       <p>
                         <strong>Subject</strong>
                       </p>
                       <div className="form-row">
                         <div className="form-group">
-                          <select id="inputCourse" className="form-control">
-                            <option selected>SELECT</option>
+                          <Form.Select id="" className="form-control">
+                            <option
+                              selected
+                              style={{
+                                fontSize: "16px",
+                              }}>
+                              SELECT
+                            </option>
                             <option>..</option>
-                            <option>...</option>
-                          </select>
+                            <option>..</option>
+                          </Form.Select>
                         </div>
                       </div>
                       <div className="form-row">
                         <div className="form-group">
-                          <select id="inputCourse" className="form-control">
-                            <option selected>SELECT</option>
+                          <Form.Select id="" className="form-control">
+                            <option
+                              selected
+                              style={{
+                                fontSize: "16px",
+                              }}>
+                              SELECT
+                            </option>
                             <option>..</option>
-                            <option>...</option>
-                          </select>
+                            <option>..</option>
+                          </Form.Select>
                         </div>
                       </div>
                       <div className="form-row">
                         <div className="form-group">
-                          <select id="inputCourse" className="form-control">
-                            <option selected>SELECT</option>
+                          <Form.Select id="" className="form-control">
+                            <option
+                              selected
+                              style={{
+                                fontSize: "16px",
+                              }}>
+                              SELECT
+                            </option>
                             <option>..</option>
-                            <option>...</option>
-                          </select>
+                            <option>..</option>
+                          </Form.Select>
                         </div>
                       </div>
                       <div className="form-row">
                         <div className="form-group">
-                          <select id="inputCourse" className="form-control">
-                            <option selected>SELECT</option>
+                          <Form.Select id="" className="form-control">
+                            <option
+                              selected
+                              style={{
+                                fontSize: "16px",
+                              }}>
+                              SELECT
+                            </option>
                             <option>..</option>
-                            <option>...</option>
-                          </select>
+                            <option>..</option>
+                          </Form.Select>
                         </div>
                       </div>
                       <div className="form-row">
                         <div className="form-group">
-                          <select id="inputCourse" className="form-control">
-                            <option selected>SELECT</option>
+                          <Form.Select id="" className="form-control">
+                            <option
+                              selected
+                              style={{
+                                fontSize: "16px",
+                              }}>
+                              SELECT
+                            </option>
                             <option>..</option>
-                            <option>...</option>
-                          </select>
+                            <option>..</option>
+                          </Form.Select>
                         </div>
                       </div>
                       <div className="form-row">
                         <div className="form-group">
-                          <select id="inputCourse" className="form-control">
-                            <option selected>SELECT</option>
+                          <Form.Select id="" className="form-control">
+                            <option
+                              selected
+                              style={{
+                                fontSize: "16px",
+                              }}>
+                              SELECT
+                            </option>
                             <option>..</option>
-                            <option>...</option>
-                          </select>
+                            <option>..</option>
+                          </Form.Select>
                         </div>
                       </div>
                       <div className="form-row">
                         <div className="form-group">
-                          <select id="inputCourse" className="form-control">
-                            <option selected>SELECT</option>
+                          <Form.Select id="" className="form-control">
+                            <option
+                              selected
+                              style={{
+                                fontSize: "16px",
+                              }}>
+                              SELECT
+                            </option>
                             <option>..</option>
-                            <option>...</option>
-                          </select>
+                            <option>..</option>
+                          </Form.Select>
                         </div>
                       </div>
                       <div className="form-row">
                         <div className="form-group">
-                          <select id="inputCourse" className="form-control">
-                            <option selected>SELECT</option>
+                          <Form.Select id="" className="form-control">
+                            <option
+                              selected
+                              style={{
+                                fontSize: "16px",
+                              }}>
+                              SELECT
+                            </option>
                             <option>..</option>
-                            <option>...</option>
-                          </select>
+                            <option>..</option>
+                          </Form.Select>
                         </div>
                       </div>
                       <div className="form-row">
                         <div className="form-group">
-                          <select id="inputCourse" className="form-control">
-                            <option selected>SELECT</option>
+                          <Form.Select id="" className="form-control">
+                            <option
+                              selected
+                              style={{
+                                fontSize: "16px",
+                              }}>
+                              SELECT
+                            </option>
                             <option>..</option>
-                            <option>...</option>
-                          </select>
+                            <option>..</option>
+                          </Form.Select>
                         </div>
                       </div>
-                    </form>
+                    </Form>
                   </div>
                   <div className="col-lg-6">
-                    <form>
+                    <Form>
                       <p>
                         <strong>Grade</strong>
                       </p>
                       <div className="form-row">
                         <div className="form-group">
-                          <select id="inputCourse" className="form-control">
-                            <option selected>SELECT</option>
+                          <Form.Select id="" className="form-control">
+                            <option
+                              selected
+                              style={{
+                                fontSize: "16px",
+                              }}>
+                              SELECT
+                            </option>
                             <option>..</option>
-                            <option>...</option>
-                          </select>
+                            <option>..</option>
+                          </Form.Select>
                         </div>
                       </div>
                       <div className="form-row">
                         <div className="form-group">
-                          <select id="inputCourse" className="form-control">
-                            <option selected>SELECT</option>
+                          <Form.Select id="" className="form-control">
+                            <option
+                              selected
+                              style={{
+                                fontSize: "16px",
+                              }}>
+                              SELECT
+                            </option>
                             <option>..</option>
-                            <option>...</option>
-                          </select>
+                            <option>..</option>
+                          </Form.Select>
                         </div>
                       </div>
                       <div className="form-row">
                         <div className="form-group">
-                          <select id="inputCourse" className="form-control">
-                            <option selected>SELECT</option>
+                          <Form.Select id="" className="form-control">
+                            <option
+                              selected
+                              style={{
+                                fontSize: "16px",
+                              }}>
+                              SELECT
+                            </option>
                             <option>..</option>
-                            <option>...</option>
-                          </select>
+                            <option>..</option>
+                          </Form.Select>
                         </div>
                       </div>
                       <div className="form-row">
                         <div className="form-group">
-                          <select id="inputCourse" className="form-control">
-                            <option selected>SELECT</option>
+                          <Form.Select id="" className="form-control">
+                            <option
+                              selected
+                              style={{
+                                fontSize: "16px",
+                              }}>
+                              SELECT
+                            </option>
                             <option>..</option>
-                            <option>...</option>
-                          </select>
+                            <option>..</option>
+                          </Form.Select>
                         </div>
                       </div>
                       <div className="form-row">
                         <div className="form-group">
-                          <select id="inputCourse" className="form-control">
-                            <option selected>SELECT</option>
+                          <Form.Select id="" className="form-control">
+                            <option
+                              selected
+                              style={{
+                                fontSize: "16px",
+                              }}>
+                              SELECT
+                            </option>
                             <option>..</option>
-                            <option>...</option>
-                          </select>
+                            <option>..</option>
+                          </Form.Select>
                         </div>
                       </div>
                       <div className="form-row">
                         <div className="form-group">
-                          <select id="inputCourse" className="form-control">
-                            <option selected>SELECT</option>
+                          <Form.Select id="" className="form-control">
+                            <option
+                              selected
+                              style={{
+                                fontSize: "16px",
+                              }}>
+                              SELECT
+                            </option>
                             <option>..</option>
-                            <option>...</option>
-                          </select>
+                            <option>..</option>
+                          </Form.Select>
                         </div>
                       </div>
                       <div className="form-row">
                         <div className="form-group">
-                          <select id="inputCourse" className="form-control">
-                            <option selected>SELECT</option>
+                          <Form.Select id="" className="form-control">
+                            <option
+                              selected
+                              style={{
+                                fontSize: "16px",
+                              }}>
+                              SELECT
+                            </option>
                             <option>..</option>
-                            <option>...</option>
-                          </select>
+                            <option>..</option>
+                          </Form.Select>
                         </div>
                       </div>
                       <div className="form-row">
                         <div className="form-group">
-                          <select id="inputCourse" className="form-control">
-                            <option selected>SELECT</option>
+                          <Form.Select id="" className="form-control">
+                            <option
+                              selected
+                              style={{
+                                fontSize: "16px",
+                              }}>
+                              SELECT
+                            </option>
                             <option>..</option>
-                            <option>...</option>
-                          </select>
+                            <option>..</option>
+                          </Form.Select>
                         </div>
                       </div>
                       <div className="form-row">
                         <div className="form-group">
-                          <select id="inputCourse" className="form-control">
-                            <option selected>SELECT</option>
+                          <Form.Select id="" className="form-control">
+                            <option
+                              selected
+                              style={{
+                                fontSize: "16px",
+                              }}>
+                              SELECT
+                            </option>
                             <option>..</option>
-                            <option>...</option>
-                          </select>
+                            <option>..</option>
+                          </Form.Select>
                         </div>
                       </div>
-                    </form>
+                    </Form>
                   </div>
                 </div>
 
@@ -303,180 +493,288 @@ export default function olevel(props) {
               <div className="col-lg-6 bg-light">
                 <div className="row">
                   <div className="col-lg-6">
-                    <form className>
+                    <Form className>
                       <p>
                         <strong>Subject</strong>
                       </p>
                       <div className="form-row">
                         <div className="form-group">
-                          <select id="inputCourse" className="form-control">
-                            <option selected>SELECT</option>
+                          <Form.Select id="" className="form-control">
+                            <option
+                              selected
+                              style={{
+                                fontSize: "16px",
+                              }}>
+                              SELECT
+                            </option>
                             <option>..</option>
-                            <option>...</option>
-                          </select>
+                            <option>..</option>
+                          </Form.Select>
                         </div>
                       </div>
                       <div className="form-row">
                         <div className="form-group">
-                          <select id="inputCourse" className="form-control">
-                            <option selected>SELECT</option>
+                          <Form.Select id="" className="form-control">
+                            <option
+                              selected
+                              style={{
+                                fontSize: "16px",
+                              }}>
+                              SELECT
+                            </option>
                             <option>..</option>
-                            <option>...</option>
-                          </select>
+                            <option>..</option>
+                          </Form.Select>
                         </div>
                       </div>
                       <div className="form-row">
                         <div className="form-group">
-                          <select id="inputCourse" className="form-control">
-                            <option selected>SELECT</option>
+                          <Form.Select id="" className="form-control">
+                            <option
+                              selected
+                              style={{
+                                fontSize: "16px",
+                              }}>
+                              SELECT
+                            </option>
                             <option>..</option>
-                            <option>...</option>
-                          </select>
+                            <option>..</option>
+                          </Form.Select>
                         </div>
                       </div>
                       <div className="form-row">
                         <div className="form-group">
-                          <select id="inputCourse" className="form-control">
-                            <option selected>SELECT</option>
+                          <Form.Select id="" className="form-control">
+                            <option
+                              selected
+                              style={{
+                                fontSize: "16px",
+                              }}>
+                              SELECT
+                            </option>
                             <option>..</option>
-                            <option>...</option>
-                          </select>
+                            <option>..</option>
+                          </Form.Select>
                         </div>
                       </div>
                       <div className="form-row">
                         <div className="form-group">
-                          <select id="inputCourse" className="form-control">
-                            <option selected>SELECT</option>
+                          <Form.Select id="" className="form-control">
+                            <option
+                              selected
+                              style={{
+                                fontSize: "16px",
+                              }}>
+                              SELECT
+                            </option>
                             <option>..</option>
-                            <option>...</option>
-                          </select>
+                            <option>..</option>
+                          </Form.Select>
                         </div>
                       </div>
                       <div className="form-row">
                         <div className="form-group">
-                          <select id="inputCourse" className="form-control">
-                            <option selected>SELECT</option>
+                          <Form.Select id="" className="form-control">
+                            <option
+                              selected
+                              style={{
+                                fontSize: "16px",
+                              }}>
+                              SELECT
+                            </option>
                             <option>..</option>
-                            <option>...</option>
-                          </select>
+                            <option>..</option>
+                          </Form.Select>
                         </div>
                       </div>
                       <div className="form-row">
                         <div className="form-group">
-                          <select id="inputCourse" className="form-control">
-                            <option selected>SELECT</option>
+                          <Form.Select id="" className="form-control">
+                            <option
+                              selected
+                              style={{
+                                fontSize: "16px",
+                              }}>
+                              SELECT
+                            </option>
                             <option>..</option>
-                            <option>...</option>
-                          </select>
+                            <option>..</option>
+                          </Form.Select>
                         </div>
                       </div>
                       <div className="form-row">
                         <div className="form-group">
-                          <select id="inputCourse" className="form-control">
-                            <option selected>SELECT</option>
+                          <Form.Select id="" className="form-control">
+                            <option
+                              selected
+                              style={{
+                                fontSize: "16px",
+                              }}>
+                              SELECT
+                            </option>
                             <option>..</option>
-                            <option>...</option>
-                          </select>
+                            <option>..</option>
+                          </Form.Select>
                         </div>
                       </div>
                       <div className="form-row">
                         <div className="form-group">
-                          <select id="inputCourse" className="form-control">
-                            <option selected>SELECT</option>
+                          <Form.Select id="" className="form-control">
+                            <option
+                              selected
+                              style={{
+                                fontSize: "16px",
+                              }}>
+                              SELECT
+                            </option>
                             <option>..</option>
-                            <option>...</option>
-                          </select>
+                            <option>..</option>
+                          </Form.Select>
                         </div>
                       </div>
-                    </form>
+                    </Form>
                   </div>
                   <div className="col-lg-6">
-                    <form>
+                    <Form>
                       <p>
                         <strong>Grade</strong>
                       </p>
                       <div className="form-row">
                         <div className="form-group">
-                          <select id="inputCourse" className="form-control">
-                            <option selected>SELECT</option>
+                          <Form.Select id="" className="form-control">
+                            <option
+                              selected
+                              style={{
+                                fontSize: "16px",
+                              }}>
+                              SELECT
+                            </option>
                             <option>..</option>
-                            <option>...</option>
-                          </select>
+                            <option>..</option>
+                          </Form.Select>
                         </div>
                       </div>
                       <div className="form-row">
                         <div className="form-group">
-                          <select id="inputCourse" className="form-control">
-                            <option selected>SELECT</option>
+                          <Form.Select id="" className="form-control">
+                            <option
+                              selected
+                              style={{
+                                fontSize: "16px",
+                              }}>
+                              SELECT
+                            </option>
                             <option>..</option>
-                            <option>...</option>
-                          </select>
+                            <option>..</option>
+                          </Form.Select>
                         </div>
                       </div>
                       <div className="form-row">
                         <div className="form-group">
-                          <select id="inputCourse" className="form-control">
-                            <option selected>SELECT</option>
+                          <Form.Select id="" className="form-control">
+                            <option
+                              selected
+                              style={{
+                                fontSize: "16px",
+                              }}>
+                              SELECT
+                            </option>
                             <option>..</option>
-                            <option>...</option>
-                          </select>
+                            <option>..</option>
+                          </Form.Select>
                         </div>
                       </div>
                       <div className="form-row">
                         <div className="form-group">
-                          <select id="inputCourse" className="form-control">
-                            <option selected>SELECT</option>
+                          <Form.Select id="" className="form-control">
+                            <option
+                              selected
+                              style={{
+                                fontSize: "16px",
+                              }}>
+                              SELECT
+                            </option>
                             <option>..</option>
-                            <option>...</option>
-                          </select>
+                            <option>..</option>
+                          </Form.Select>
                         </div>
                       </div>
                       <div className="form-row">
                         <div className="form-group">
-                          <select id="inputCourse" className="form-control">
-                            <option selected>SELECT</option>
+                          <Form.Select id="" className="form-control">
+                            <option
+                              selected
+                              style={{
+                                fontSize: "16px",
+                              }}>
+                              SELECT
+                            </option>
                             <option>..</option>
-                            <option>...</option>
-                          </select>
+                            <option>..</option>
+                          </Form.Select>
                         </div>
                       </div>
                       <div className="form-row">
                         <div className="form-group">
-                          <select id="inputCourse" className="form-control">
-                            <option selected>SELECT</option>
+                          <Form.Select id="" className="form-control">
+                            <option
+                              selected
+                              style={{
+                                fontSize: "16px",
+                              }}>
+                              SELECT
+                            </option>
                             <option>..</option>
-                            <option>...</option>
-                          </select>
+                            <option>..</option>
+                          </Form.Select>
                         </div>
                       </div>
                       <div className="form-row">
                         <div className="form-group">
-                          <select id="inputCourse" className="form-control">
-                            <option selected>SELECT</option>
+                          <Form.Select id="" className="form-control">
+                            <option
+                              selected
+                              style={{
+                                fontSize: "16px",
+                              }}>
+                              SELECT
+                            </option>
                             <option>..</option>
-                            <option>...</option>
-                          </select>
+                            <option>..</option>
+                          </Form.Select>
                         </div>
                       </div>
                       <div className="form-row">
                         <div className="form-group">
-                          <select id="inputCourse" className="form-control">
-                            <option selected>SELECT</option>
+                          <Form.Select id="" className="form-control">
+                            <option
+                              selected
+                              style={{
+                                fontSize: "16px",
+                              }}>
+                              SELECT
+                            </option>
                             <option>..</option>
-                            <option>...</option>
-                          </select>
+                            <option>..</option>
+                          </Form.Select>
                         </div>
                       </div>
                       <div className="form-row">
                         <div className="form-group">
-                          <select id="inputCourse" className="form-control">
-                            <option selected>SELECT</option>
+                          <Form.Select id="" className="form-control">
+                            <option
+                              selected
+                              style={{
+                                fontSize: "16px",
+                              }}>
+                              SELECT
+                            </option>
                             <option>..</option>
-                            <option>...</option>
-                          </select>
+                            <option>..</option>
+                          </Form.Select>
                         </div>
                       </div>
-                    </form>
+                    </Form>
                   </div>
                 </div>
 

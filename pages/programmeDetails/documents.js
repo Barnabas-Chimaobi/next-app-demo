@@ -1,17 +1,27 @@
 import React from "react";
+import { Form } from "react-bootstrap";
+import { Typography } from "antd";
+// const { Option } = Select;
+const { Text } = Typography;
 
 export default function documents() {
   return (
     <div>
-      <div style={{ border: "none" }} className="row card col-sm-12 col-lg-12">
+      <div className="row card col-sm-12 col-lg-12">
         <div className="col-6">
-          <form>
+          <Form>
             <h5 className="mt-3">O Level</h5>
             <div className="form-row">
               <div className="form-group">
-                <label htmlFor="inputOtherName">
+                <Text
+                  style={{
+                    fontFamily: "Gilroy-ExtraBold",
+                    fontStyle: "normal",
+                    fontWeight: "400",
+                    fontSize: "20px",
+                  }}>
                   First Sitting Result (Scanned Copy)
-                </label>
+                </Text>
                 <input
                   type="file"
                   name="myImage"
@@ -19,16 +29,22 @@ export default function documents() {
                 />
               </div>
             </div>
-          </form>
+          </Form>
         </div>
         <div className="col-6">
-          <form>
+          <Form>
             <h5 className="mt-3">O Level</h5>
             <div className="form-row">
               <div className="form-group">
-                <label htmlFor="inputOtherName">
+                <Text
+                  style={{
+                    fontFamily: "Gilroy-ExtraBold",
+                    fontStyle: "normal",
+                    fontWeight: "400",
+                    fontSize: "20px",
+                  }}>
                   Second Sitting Result (Scanned Copy)
-                </label>
+                </Text>
                 <input
                   type="file"
                   name="myImage"
@@ -36,18 +52,26 @@ export default function documents() {
                 />
               </div>
             </div>
-          </form>
+          </Form>
         </div>
         <hr />
         <div className="row">
-          <div className="col-4">
-            <form>
+          <div className="col-lg-4 col-sm-6">
+            <Form>
               <p>
                 <strong>ND RESULT</strong>
               </p>
               <div className="form-row">
                 <div className="form-group">
-                  <label htmlFor="inputOtherName">ND Certificate</label>
+                  <Text
+                    style={{
+                      fontFamily: "Gilroy-ExtraBold",
+                      fontStyle: "normal",
+                      fontWeight: "400",
+                      fontSize: "20px",
+                    }}>
+                    ND Certificate
+                  </Text>
                   <input
                     type="file"
                     name="myImage"
@@ -55,13 +79,21 @@ export default function documents() {
                   />
                 </div>
               </div>
-            </form>
+            </Form>
           </div>
           <div className="col-4">
-            <form>
+            <Form>
               <div className="form-row">
                 <div className="form-group" style={{ marginTop: "40px" }}>
-                  <label htmlFor="inputOtherName">ND Result</label>
+                  <Text
+                    style={{
+                      fontFamily: "Gilroy-ExtraBold",
+                      fontStyle: "normal",
+                      fontWeight: "400",
+                      fontSize: "20px",
+                    }}>
+                    ND Result
+                  </Text>
                   <input
                     type="file"
                     name="myImage"
@@ -69,15 +101,21 @@ export default function documents() {
                   />
                 </div>
               </div>
-            </form>
+            </Form>
           </div>
           <div className="col-4">
-            <form>
+            <Form>
               <div className="form-row">
                 <div className="form-group" style={{ marginTop: "40px" }}>
-                  <label htmlFor="inputOtherName">
+                  <Text
+                    style={{
+                      fontFamily: "Gilroy-ExtraBold",
+                      fontStyle: "normal",
+                      fontWeight: "400",
+                      fontSize: "20px",
+                    }}>
                     IT Letter Of Completion
-                  </label>
+                  </Text>
                   <input
                     type="file"
                     name="myImage"
@@ -85,7 +123,7 @@ export default function documents() {
                   />
                 </div>
               </div>
-            </form>
+            </Form>
           </div>
           <div className="mt-5 mb-3">
             <button

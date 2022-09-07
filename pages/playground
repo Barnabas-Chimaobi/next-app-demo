@@ -32,7 +32,6 @@
                 <button
                   type="submit"
                   className="btn darkGreen btn-block"
-                  style={{ width: "" }}
                   onClick={() => loginStaff()}
                 >
                   <a
