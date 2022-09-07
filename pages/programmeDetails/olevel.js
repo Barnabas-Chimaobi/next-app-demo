@@ -4,7 +4,7 @@ import { Typography } from "antd";
 // const { Option } = Select;
 const { Text } = Typography;
 
-export default function olevel() {
+export default function olevel(props) {
   return (
     <div>
       <div className="row card col-sm-12 col-lg-12  pb-4 pt-4">
@@ -23,7 +23,10 @@ export default function olevel() {
                     }}>
                     Type
                   </Text>
-                  <Form.Select id="" className="form-control">
+                  <Form.Select
+                    id=""
+                    className="form-control"
+                    onChange={props.oleveltype}>
                     <option
                       selected
                       style={{
@@ -51,6 +54,7 @@ export default function olevel() {
                     type="text"
                     className="form-control"
                     id="inputCourse"
+                    onChange={props.examNumber}
                   />
                 </div>
               </div>
@@ -65,7 +69,10 @@ export default function olevel() {
                     }}>
                     Exam Year
                   </Text>
-                  <Form.Select id="" className="form-control">
+                  <Form.Select
+                    id=""
+                    className="form-control"
+                    onChange={props.examYear}>
                     <option
                       selected
                       style={{
@@ -93,6 +100,7 @@ export default function olevel() {
                     type="text"
                     className="form-control"
                     id="inputCourse"
+                    onChange={props.scratchcard}
                   />
                 </div>
               </div>
