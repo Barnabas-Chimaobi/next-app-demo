@@ -60,3 +60,42 @@ a {
   background-color: green;
   color: white;
 }
+
+.ant-menu-item a {
+  color: white;
+}
+.ant-menu-item a:hover {
+  color: rgba(9, 207, 42, 0.85);
+}
+.ant-menu-item:hover {
+  background-color: #fff !important;
+  color: #047735 !important;
+}
+.ant-menu-item-selected {
+  color: #047735 !important;
+}
+.ant-menu-item-selected a, .ant-menu-item-selected a:hover {
+  color: #047735 !important;
+}
+.ant-menu-vertical .ant-menu-item::after, .ant-menu-vertical-left .ant-menu-item::after, .ant-menu-vertical-right .ant-menu-item::after, .ant-menu-inline .ant-menu-item::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  border-right: 3px solid #047735 !important;
+  transform: scaleY(0.0001);
+  opacity: 0;
+  transition: transform 0.15s cubic-bezier(0.215, 0.61, 0.355, 1), opacity 0.15s cubic-bezier(0.215, 0.61, 0.355, 1);
+  content: '';
+}
+
+@media screen and (max-width: "450px") {
+  .progressCard {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    justify-content: center;
+    margin-left: 50px;
+  }
+}

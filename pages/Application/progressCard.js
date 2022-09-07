@@ -7,8 +7,13 @@ const { Text } = Typography;
 export default function progressCard() {
   return (
     <div
-      className="card col-lg-4 col-sm-12 darkGreen ml-lg-3 mt-sm-3"
-      style={{ paddingBottom: "40px", maxHeight: "680px" }}>
+      className="card  darkGreen ml-lg-3 mt-sm-3 progressCard "
+      style={{
+        paddingBottom: "40px",
+        maxHeight: "680px",
+        position: "fixe",
+        maxWidth: "412px",
+      }}>
       <div className="mr-4 mt-4 lightGreen text-white rounded p-2">
         <Space>
           <BsPersonCircle style={{ width: "20px", height: "20px" }} />

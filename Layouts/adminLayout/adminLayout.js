@@ -7,6 +7,7 @@ import {
   HomeOutlined,
   // UserOutlined,
 } from "@ant-design/icons";
+import { FaSchool } from "react-icons/fa";
 import { Breadcrumb, Divider, Layout, Menu, Space, Typography } from "antd";
 import React, { useState } from "react";
 import { colors } from "../../utils/colors";
@@ -89,7 +90,9 @@ const items = [
   {
     label: (
       <Link href="#" style={{ fontSize: "12px", color: "#FFFFFF" }}>
-        <Text style={{ color: "white" }}>Admin Setting</Text>
+        {/* <Text style={{ color: "white" }}> */}
+        Admin Setting
+        {/* </Text> */}
       </Link>
     ),
     icon: <HomeOutlined width={25} height={19.44} />,
@@ -100,18 +103,36 @@ const items = [
         href="#"
         color="white"
         style={{ fontSize: "12px", color: "#FFFFFF" }}>
-        <Text style={{ color: "white" }}>Admission</Text>
+        {/* <Text style={{ color: "white" }}> */}
+        Admission
+        {/* </Text> */}
       </Link>
     ),
     icon: <UserOutlined width={25} height={19.44} />,
   },
   {
     label: (
-      <Link href="#" style={{ fontSize: "12px", color: "#FFFFFF" }}>
-        <Text style={{ color: "white" }}>Reports</Text>
+      <Link
+        href="/admin/reportSetup"
+        style={{ fontSize: "12px", color: "#FFFFFF" }}>
+        {/* <Text style={{ color: "white" }}> */}
+        Report Setup
+        {/* </Text> */}
       </Link>
     ),
     icon: <TeamOutlined width={25} height={19.44} />,
+  },
+  {
+    label: (
+      <Link
+        href="/admin/schoolSetUp"
+        style={{ fontSize: "12px", color: "white" }}>
+        {/* <Text style={{ color: "white" }}> */}
+        School Setup
+        {/* </Text> */}
+      </Link>
+    ),
+    icon: <FaSchool width={25} height={19.44} />,
   },
 ];
 
