@@ -59,7 +59,7 @@ export default function SaveDepartmentForm(props) {
             >
               Name
             </Text>
-            <Form.Select onChange={(name) => {setDeptName(name.target.name)}} className="form-control">
+            <Form.Select onChange={(name) => {setDeptName(name.target.value)}} className="form-control">
               <option selected>-- SELECT DEPARTMENT NAME-- </option>
               <option>TEXT</option>
               <option>EMAIL</option>
@@ -83,7 +83,7 @@ export default function SaveDepartmentForm(props) {
               Description
             </Text>
             <Form.Control
-              onChange={(name) => {setDescription(name.target.name)}}
+              onChange={(name) => {setDescription(name.target.value)}}
               as="textarea"
               placeholder="ADD DESCRIPTION"
               className="pt-4 pb-4"

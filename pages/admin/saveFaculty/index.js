@@ -58,7 +58,7 @@ export default function SaveFacultyForm() {
             >
               Name
             </Text>
-            <Form.Select onChange={(name) => {setFacultyName(name.target.name)}} className="form-control">
+            <Form.Select onChange={(name) => {setFacultyName(name.target.value), console.log(name.target.value, 'target===value====')}} className="form-control">
               <option selected>-- SELECT FACULTY NAME-- </option>
               <option>TEXT</option>
               <option>EMAIL</option>
@@ -82,7 +82,7 @@ export default function SaveFacultyForm() {
               Description
             </Text>
             <Form.Control
-              onChange={(name) => {setDescription(name.target.name)}}
+              onChange={(name) => {setDescription(name.target.value)}}
               as="textarea"
               placeholder="ADD DESCRIPTION"
               className="pt-4 pb-4"

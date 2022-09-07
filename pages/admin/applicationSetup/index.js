@@ -4,14 +4,16 @@ import { Breadcrumb, Layout, Menu } from 'antd';
 import { colors } from '../../../utils/colors';
 import { useDispatch, useSelector } from 'react-redux'
 import { SAVE_DYNAMIC_FORM_SETUP } from '../../../api/mutations/adminMutation';
-import { useMutation } from '@apollo/client';
+import { useMutation, useQuery, useLazyQuery } from '@apollo/client';
 const { Header, Content, Footer, Sider } = Layout;
 
 export default function index() {
     let [fieldname, setfieldname] = React.useState("");
     let [field_type, setfieldtype] = React.useState("");
     let [field_label, setfieldlabel] = React.useState("");
-    const  [setupForm, { loading: setupLoading, error: setupError, data: setupData }] = useMutation(SAVE_DYNAMIC_FORM_SETUP);
+    let [section, setSection] = React.useState("");
+    const faculty = useSelector(state => state.schoolSetup.faculty);
+    const [setupForm, { loading: setupLoading, error: setupError, data: setupData }] = useMutation(SAVE_DYNAMIC_FORM_SETUP);
 
     const implementAddField = () => {
     
@@ -35,11 +37,23 @@ export default function index() {
         formGroup.appendChild(formLabel)
         addElement.appendChild(inputElement);
         formLabel.innerHTML = field_label
+
     }
 
     const handleLabel = (event) => {
         const target = event.target.value;
         setfieldlabel(target);
+        console.log(fieldname)
+    };
+
+    const handleSection = (event) => {
+        const target = event.target.value;
+        setSection(target);
+    };
+
+    const handleName = (event) => {
+        const target = event.target.value;
+        setfieldname(target);
         console.log(fieldname)
     };
   
@@ -53,21 +67,16 @@ export default function index() {
         console.log( username, password,  'login======')
         const login = await setupForm({variables: {
            model: {
-            active: '',
-            createdOn: '',
             fieldDetails: {
-               input_type: '',
-               label: '',
-               name: '',
+               input_type: field_type,
+               label: field_label,
+               name: fieldname,
                required: '',
-               sectionTitle: ''
+               sectionTitle: section
             },
             programmeId: '',
-            session: {
-                
-            },
             sessionId: '',
-            userId: ''
+            userId: '',
            }
         }})
       }
@@ -78,6 +87,8 @@ export default function index() {
         router.push('./admin/applicationSetup')
         console.log(setupData, 'logindataaaaass====')
       }
+
+      console.log(faculty, 'facultyyyy====codess====')
   
   return (
       <AdminLayout>
@@ -90,41 +101,32 @@ export default function index() {
                         <div className='form-row row'>
                             <div className='form-group col-lg-3'>
                                 <label className='label-control'>Form Section</label>
-                                <select  onChange={handleLabel} id="" className="form-control">
-                                    <option selected>BIO-DATA</option>
+                                <select  onChange={handleSection} id="" className="form-control">
+                                    <option selected>Bio-Data</option>
                                     <option>..</option>
                                     <option>..</option>
                                 </select>
                                
                             </div>
                             <div className='form-group col-lg-3'>
-                                <label>Input Type</label>
+                                <label>Field Type</label>
                                 <select  onChange={handleInputType} id="" className="form-control">
                                     <option selected>REGULAR</option>
                                     <option>Text..</option>
                                     <option>Number..</option>
                                     <option>Email..</option>
                                 </select>
-                                <div className='card mt-3'>
-                                    <ul>
-                                        <li style={{listStyle: 'none', color: 'black'}}>TEXT</li>
-                                        <li style={{listStyle: 'none'}}>EMAIL</li>
-                                        <li style={{listStyle: 'none'}}>PASSWORD</li>
-                                    </ul>
-                                    
-                                </div>
                             </div>
                             <div className='form-group col-lg-3'>
-                                <label>Input Name</label>
-                                <select  onChange={handleLabel} id="" className="form-control">
+                                <label>Field Name</label>
+                                <select  onChange={handleName} id="" className="form-control">
                                     <option selected>--</option>
                                     <option>..</option>
                                     <option>..</option>
                                 </select>
-                               
                             </div>
                             <div className='form-group col-lg-3'>
-                                <label>Label</label>
+                                <label>Field Label</label>
                                 <select  onChange={handleLabel} id="" className="form-control">
                                     <option selected>--</option>
                                     <option>..</option>

@@ -15,6 +15,8 @@ import "../styles/globals.css";
 import "@fontsource/inter";
 import "@fontsource/montserrat";
 import NewNav from "../components/newNav";
+import {Provider} from 'react-redux';
+import store from '../redux/stores'
 
 // import { RestLink } from "apollo-link-rest";
 
@@ -48,11 +50,13 @@ function MyApp({ Component, pageProps }) {
           src="https://kit.fontawesome.com/18846ba9d4.js"
           crossorigin="anonymous"></script>
       </Head>
+      <Provider store={store}>
       <ApolloProvider client={client}>
         {/* <Frontlayout> */}
         <Component {...pageProps} style={{ fontFamily: "Montserrat" }} />
         {/* </Frontlayout> */}
       </ApolloProvider>
+      </Provider>
       {/* <main>
           {children}
         </main> */}
