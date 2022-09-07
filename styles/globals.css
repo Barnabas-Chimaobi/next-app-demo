@@ -60,3 +60,23 @@ a {
   background-color: green;
   color: white;
 }
+
+.ant-menu:not(.ant-menu-horizontal) .ant-menu-item-selected {
+  color: #047735 !important;
+}
+.ant-menu:not(.ant-menu-horizontal) .ant-menu-item-selected a {
+  color: #047735 !important;
+}
+
+.ant-menu-item a {
+  color: #fff;
+}
+
+.ant-menu-item a:hover {
+  color: #047735 !important;
+}
+
+.ant-menu-item:hover {
+  background-color: #fff !important;
+  color: #047735 !important;
+}

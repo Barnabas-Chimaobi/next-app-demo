@@ -14,19 +14,16 @@ export default function Home() {
   const [departmentId, setDepartmentId] = useState();
   const [firstName, setfirstName] = useState("");
   const [Surname, setSurname] = useState("");
-  const [biodata, setBiodata] = useState({
-    key: "",
-    name: firstName + "" + Surname,
-  });
-
+  const [key, setKey] = useState();
+  const name = firstName + Surname;
   const AppStartSubmit = async () => {
     const start = await appStart({
       variables: {
-        programmeId,
-        departmentId,
+        programmeId: programmeId,
+        departmentId: departmentId,
         biodata: {
-          key: biodata.key,
-          name: biodata.name,
+          key: key,
+          name: name,
         },
       },
     });

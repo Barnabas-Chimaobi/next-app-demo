@@ -89,8 +89,16 @@ function getItem(label, key, icon, children) {
 const items = [
   {
     label: (
-      <Link href="#" style={{ fontSize: "12px", color: "#FFFFFF" }}>
-        <Text style={{ color: "white" }}>Admin Setting</Text>
+      <Link
+        href="#"
+        style={{
+          fontSize: "12px",
+          // color: "#FFFFFF"
+        }}
+      >
+        {/* <Text> */}
+        Admin Setting
+        {/* </Text> */}
       </Link>
     ),
     icon: <HomeOutlined width={25} height={19.44} />,
@@ -99,10 +107,14 @@ const items = [
     label: (
       <Link
         href="#"
-        color="white"
-        style={{ fontSize: "12px", color: "#FFFFFF" }}
+        style={{
+          fontSize: "12px",
+          // color: "#FFFFFF"
+        }}
       >
-        <Text style={{ color: "white" }}>Admission</Text>
+        {/* <Text style={{ color: "white" }} id="adminHiglight"> */}
+        Admission
+        {/* </Text> */}
       </Link>
     ),
     icon: <UserOutlined width={25} height={19.44} />,
@@ -110,7 +122,9 @@ const items = [
   {
     label: (
       <Link href="#" style={{ fontSize: "12px", color: "#FFFFFF" }}>
-        <Text style={{ color: "white" }}>Reports</Text>
+        {/* <Text style={{ color: "white" }}> */}
+        Reports
+        {/* </Text> */}
       </Link>
     ),
     icon: <TeamOutlined width={25} height={19.44} />,
@@ -121,7 +135,9 @@ const items = [
         href="/admin/schoolSetUp"
         style={{ fontSize: "12px", color: "#FFFFFF" }}
       >
-        <Text style={{ color: "white" }}>Setup School</Text>
+        {/* <Text style={{ color: "white" }}> */}
+        Setup School
+        {/* </Text> */}
       </Link>
     ),
     icon: <FaSchool width={25} height={19.44} />,
