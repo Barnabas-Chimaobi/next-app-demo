@@ -5,7 +5,7 @@ export const SaveSession = (props) => {
   return (
     <main>
       <FirstModal show={props.show} close={props.close}>
-        <SaveSessionForm />
+        <SaveSessionForm onclose={props.onclose} />
       </FirstModal>
     </main>
   );

@@ -89,14 +89,8 @@ function getItem(label, key, icon, children) {
 const items = [
   {
     label: (
-      <Link
-        href="#"
-        style={{
-          fontSize: "12px",
-          // color: "#FFFFFF"
-        }}
-      >
-        {/* <Text> */}
+      <Link href="#" style={{ fontSize: "12px", color: "#FFFFFF" }}>
+        {/* <Text style={{ color: "white" }}> */}
         Admin Setting
         {/* </Text> */}
       </Link>
@@ -107,12 +101,9 @@ const items = [
     label: (
       <Link
         href="#"
-        style={{
-          fontSize: "12px",
-          // color: "#FFFFFF"
-        }}
-      >
-        {/* <Text style={{ color: "white" }} id="adminHiglight"> */}
+        color="white"
+        style={{ fontSize: "12px", color: "#FFFFFF" }}>
+        {/* <Text style={{ color: "white" }}> */}
         Admission
         {/* </Text> */}
       </Link>
@@ -121,9 +112,11 @@ const items = [
   },
   {
     label: (
-      <Link href="#" style={{ fontSize: "12px", color: "#FFFFFF" }}>
+      <Link
+        href="/admin/reportSetup"
+        style={{ fontSize: "12px", color: "#FFFFFF" }}>
         {/* <Text style={{ color: "white" }}> */}
-        Reports
+        Report Setup
         {/* </Text> */}
       </Link>
     ),
@@ -133,10 +126,9 @@ const items = [
     label: (
       <Link
         href="/admin/schoolSetUp"
-        style={{ fontSize: "12px", color: "#FFFFFF" }}
-      >
+        style={{ fontSize: "12px", color: "white" }}>
         {/* <Text style={{ color: "white" }}> */}
-        Setup School
+        School Setup
         {/* </Text> */}
       </Link>
     ),
@@ -160,8 +152,7 @@ const AdminLayout = ({ children }) => {
         {
           // minHeight: "100vh",
         }
-      }
-    >
+      }>
       <Sider
         className="side-menu"
         style={{
@@ -175,8 +166,7 @@ const AdminLayout = ({ children }) => {
         collapsedWidth={0}
         collapsed={collapsed}
         width="230px"
-        onCollapse={(value) => setCollapsed(value)}
-      >
+        onCollapse={(value) => setCollapsed(value)}>
         <div className="container">
           <Space style={{ padding: "12px" }}>
             <img src="../../vector.png" width={22} height={20} />
@@ -213,15 +203,13 @@ const AdminLayout = ({ children }) => {
           style={{
             // margin: "0 16px",
             backgroundColor: colors.ashGrayBg,
-          }}
-        >
+          }}>
           {children}
         </Content>
         <Footer
           style={{
             textAlign: "center",
-          }}
-        >
+          }}>
           Ant Design ©2018 Created by Ant UED
         </Footer>
       </Layout>

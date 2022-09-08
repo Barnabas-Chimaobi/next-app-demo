@@ -6,7 +6,7 @@ export const SaveDepartment = (props) => {
   return (
     <main>
       <FirstModal show={props.show} close={props.close}>
-        <SaveDepartmentForm />
+        <SaveDepartmentForm onclose={props.close} />
       </FirstModal>
     </main>
   );

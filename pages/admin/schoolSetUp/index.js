@@ -15,6 +15,10 @@ const { Text } = Typography;
 export default function Index() {
   // AddDepartmentModal
   const [show, setShow] = useState(false);
+  const [Reveal, setReveal] = useState(false);
+  const [disclose, setdisclose] = useState(false);
+  const [display, setdisplay] = useState(false);
+  const [Open, setOpen] = useState(false);
 
   const handleShow = () => setShow(!show);
 
@@ -22,15 +26,18 @@ export default function Index() {
 
   // SaveDepartmentModal
 
-  const [Reveal, setReveal] = useState(false);
-
   const handleReveal = () => setReveal(!Reveal);
+  const onClose = () => {
+    setReveal(false);
+    setdisclose(false);
+    setShow(false);
+    setdisplay(false);
+    setOpen(false);
+  };
 
   // SaveDeparmentModalEnd
 
   // SaveFacultyModal
-
-  const [display, setdisplay] = useState(false);
 
   const handledisplay = () => setdisplay(!display);
 
@@ -38,15 +45,11 @@ export default function Index() {
 
   // SaveProgrammeModal
 
-  const [disclose, setdisclose] = useState(false);
-
   const handledisclose = () => setdisclose(!disclose);
 
   // SaveProgrammeModalEnd
 
   // SaveSessionModal
-
-  const [Open, setOpen] = useState(false);
 
   const handleOpen = () => setOpen(!Open);
 
@@ -57,7 +60,7 @@ export default function Index() {
       <div style={{ marginTop: "30px" }}>
         <Container className="pr-5 pl-5">
           <Row>
-            <Col lg={4} sm={6} className="pb-3" onClick={handleShow}>
+            <Col lg={3} sm={6} className="pb-3" onClick={handleReveal}>
               <ModalCard>
                 <Text
                   style={{
@@ -74,36 +77,12 @@ export default function Index() {
                     lineHeight: "25px",
 
                     color: "#FFFFFF",
-                  }}
-                >
-                  Add Department
-                </Text>
-              </ModalCard>
-            </Col>
-            <Col lg={4} sm={6} className="pb-3" onClick={handleReveal}>
-              <ModalCard>
-                <Text
-                  style={{
-                    // position: absolute;
-                    width: "158px",
-                    height: "25px",
-                    left: "589px",
-                    top: "294px",
-
-                    fontFamily: "Gilroy-ExtraBold",
-                    fontStyle: "normal",
-                    fontWeight: "400",
-                    fontSize: "20px",
-                    lineHeight: "25px",
-
-                    color: "#FFFFFF",
-                  }}
-                >
+                  }}>
                   Save Department
                 </Text>
               </ModalCard>
             </Col>
-            <Col lg={4} sm={6} className="pb-3" onClick={handledisplay}>
+            <Col lg={3} sm={6} className="pb-3" onClick={handledisplay}>
               <ModalCard>
                 <Text
                   style={{
@@ -120,13 +99,12 @@ export default function Index() {
                     lineHeight: "25px",
 
                     color: "#FFFFFF",
-                  }}
-                >
+                  }}>
                   Save Faculty
                 </Text>
               </ModalCard>
             </Col>
-            <Col lg={4} sm={6} className="pb-3" onClick={handledisclose}>
+            <Col lg={3} sm={6} className="pb-3" onClick={handledisclose}>
               <ModalCard>
                 <Text
                   style={{
@@ -143,13 +121,12 @@ export default function Index() {
                     lineHeight: "25px",
 
                     color: "#FFFFFF",
-                  }}
-                >
+                  }}>
                   Save Programme
                 </Text>
               </ModalCard>
             </Col>
-            <Col lg={4} sm={6} className="pb-3" onClick={handleOpen}>
+            <Col lg={3} sm={6} className="pb-3" onClick={handleOpen}>
               <ModalCard>
                 <Text
                   style={{
@@ -166,18 +143,24 @@ export default function Index() {
                     lineHeight: "25px",
 
                     color: "#FFFFFF",
-                  }}
-                >
+                  }}>
                   Save Session
                 </Text>
               </ModalCard>
             </Col>
           </Row>
-          <AddDepartMent show={show} close={handleShow} />
-          <SaveDepartment show={Reveal} close={handleReveal} />
-          <SaveFaculty show={display} close={handledisplay} />
-          <SaveProgramme show={disclose} close={handledisclose} />
-          <SaveSession show={Open} close={handleOpen} />
+          <SaveDepartment
+            show={Reveal}
+            close={handleReveal}
+            onclose={onClose}
+          />
+          <SaveFaculty show={display} close={handledisplay} onclose={onClose} />
+          <SaveProgramme
+            show={disclose}
+            close={handledisclose}
+            onclose={onClose}
+          />
+          <SaveSession show={Open} close={handleOpen} onclose={onClose} />
         </Container>
       </div>
     </AdminLayout>

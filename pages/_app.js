@@ -12,9 +12,12 @@ import { client } from "../api";
 import Frontlayout from "../Layouts/FrontLayout/frontlayout";
 import "antd/dist/antd.css"; // or 'antd/dist/antd.less'
 import "../styles/globals.css";
+import "../styles/index.module.css";
 import "@fontsource/inter";
 import "@fontsource/montserrat";
 import NewNav from "../components/newNav";
+import {Provider} from 'react-redux';
+import store from '../redux/stores'
 
 // import { RestLink } from "apollo-link-rest";
 
@@ -48,15 +51,17 @@ function MyApp({ Component, pageProps }) {
           src="https://kit.fontawesome.com/18846ba9d4.js"
           crossorigin="anonymous"></script>
       </Head>
+      <Provider store={store}>
       <ApolloProvider client={client}>
         {/* <Frontlayout> */}
         <Component {...pageProps} style={{ fontFamily: "Montserrat" }} />
         {/* </Frontlayout> */}
       </ApolloProvider>
+      </Provider>
       {/* <main>
           {children}
         </main> */}
-  
+
       {/* FOOTER */}
       {/* <footer className="footer py-5">
     <div className="container">

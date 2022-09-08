@@ -1,7 +1,7 @@
 import React from "react";
 import { AdminLayout } from "../../../Layouts/adminLayout/adminLayout";
 import { Select, Typography, Space } from "antd";
-import { Container, Form } from "react-bootstrap";
+import { Container, Form, Card } from "react-bootstrap";
 const { Option } = Select;
 const { Text } = Typography;
 
@@ -10,8 +10,17 @@ export default function index() {
     <AdminLayout>
       <Container>
         <div>
-          <div className=" container bg-light pb-5 pt-5 pl-5">
-            <div className="container bg-white pb-3 mt-4">
+          {/* <Card> */}
+          <div className="container bg-light pb-5 pt-5 pl-5">
+            <div
+              className="container card bg-white pb-3 mt-4"
+              style={{
+                background: "#FFFFFF",
+                boxShadow:
+                  "0px 60px 147px rgba(0, 0, 0, 0.035), 0px 7.51293px 18.4067px rgba(0, 0, 0, 0.07)",
+                borderRadius: "10px",
+                border: "none",
+              }}>
               <div className="container bg-white pb-3">
                 <h4 className="text-center pb-4 pt-5">Dynamic Reports Setup</h4>
                 <form>
@@ -48,7 +57,7 @@ export default function index() {
                         className="form-control mt-3 mt-xl-0 mt-lg-0"
                         // defaultValue={"--SELECT FEE TYPE--"}
                         style={{
-                          width: "300px",
+                          // maxWidth: "638px",
                           marginLeft: "10px",
                           display: "flex",
                           alignItems: "center",
@@ -73,6 +82,7 @@ export default function index() {
               </div>
             </div>
           </div>
+          {/* </Card> */}
         </div>
       </Container>
     </AdminLayout>
