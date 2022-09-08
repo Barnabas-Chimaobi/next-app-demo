@@ -1,11 +1,42 @@
-import React from "react";
+import React, { useState } from "react";
 import { Input, Typography, Button, Space, DatePicker } from "antd";
 import { Card, Form, Row, Col } from "react-bootstrap";
 import Frontlayout from "../../../Layouts/FrontLayout/frontlayout";
+import { useMutation } from "@apollo/client";
+import { SAVE_SESSION } from "../../../api/mutations/adminMutation";
+import Error from "../../../components/CustomMessages/Error";
+import Success from "../../../components/CustomMessages/Success";
+import Warning from "../../../components/CustomMessages/Warning";
 
 const { Text } = Typography;
 
-export default function SaveSessionForm() {
+export default function SaveSessionForm(props) {
+  const [
+    sessionAdd,
+    { loading: sessionLoad, error: sessionError, data: sessionData },
+  ] = useMutation(SAVE_SESSION);
+
+  const [name, setName] = useState("");
+  const [startDate, setStartDate] = useState("");
+  const [endDate, setEndDate] = useState("");
+
+  const [closeOnSubmit, setCloseOnSubmit] = useState(false);
+
+  const AddSession = async () => {
+    // setCloseOnSubmit(props.onclose);
+    setTimeout(() => {
+      setCloseOnSubmit(props.onclose);
+    }, 2000);
+    const session = await sessionAdd({
+      variables: {
+        name: name,
+        startDate: startDate,
+        endDate: endDate,
+      },
+    });
+  };
+
+  console.log(sessionError + "dhdjdjddjde");
   return (
     // <Frontlayout>
     <div
@@ -14,6 +45,12 @@ export default function SaveSessionForm() {
     // }}
     // className="card container"
     >
+      {sessionError ? (
+        <Error title="Error Title" subtitle="Error Subtitle" />
+      ) : null}
+      {sessionData ? (
+        <Success title="Success Title" subtitle="Error subtitle" />
+      ) : null}
       <Card
         style={{
           background: "#FFFFFF",
@@ -22,8 +59,7 @@ export default function SaveSessionForm() {
           borderRadius: "10px",
           border: "none",
           padding: "74px 54px",
-        }}
-      >
+        }}>
         <h3>Save Session</h3>
         <Row>
           <Col lg={12} xl={12} sm={6} style={{ marginBottom: "34px" }}>
@@ -38,11 +74,12 @@ export default function SaveSessionForm() {
                 textTransform: "capitalize",
 
                 color: "#3E4851",
-              }}
-            >
+              }}>
               Name
             </Text>
-            <Form.Select className="form-control">
+            <Form.Select
+              className="form-control"
+              onChange={(e) => setName(e.target.value)}>
               <option selected>-- SELECT SESSION NAME-- </option>
               <option>TEXT</option>
               <option>EMAIL</option>
@@ -62,12 +99,15 @@ export default function SaveSessionForm() {
                 textTransform: "capitalize",
 
                 color: "#3E4851",
-              }}
-            >
+              }}>
               Start Date
             </Text>
             {/* <DatePicker /> */}
-            <Form.Control type="date" />
+            <Form.Control
+              type="date"
+              onChange={(e) => setStartDate(e.target.value)}
+              style={{ color: "black" }}
+            />
           </Col>
           <Col lg={6} xl={6} sm={6} style={{ marginBottom: "34px" }}>
             <Text
@@ -81,11 +121,14 @@ export default function SaveSessionForm() {
                 textTransform: "capitalize",
 
                 color: "#3E4851",
-              }}
-            >
+              }}>
               End Date
             </Text>
-            <Form.Control type="date" />
+            <Form.Control
+              type="date"
+              onChange={(e) => setEndDate(e.target.value)}
+              style={{ color: "black" }}
+            />
           </Col>
         </Row>
         <Space
@@ -93,9 +136,10 @@ export default function SaveSessionForm() {
             display: "flex",
             justifyContent: "flex-end",
             alignItems: "flex-end",
-          }}
-        >
-          <Button style={{ background: "#047735", borderRadius: "5px" }}>
+          }}>
+          <Button
+            style={{ background: "#047735", borderRadius: "5px" }}
+            onClick={() => AddSession()}>
             <Text
               style={{
                 fontFamily: "Gilroy-Medium",
@@ -106,8 +150,7 @@ export default function SaveSessionForm() {
                 textTransform: "capitalize",
 
                 color: "#FFFFFF",
-              }}
-            >
+              }}>
               Submit
             </Text>
           </Button>

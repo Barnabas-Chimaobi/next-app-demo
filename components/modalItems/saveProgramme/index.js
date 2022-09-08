@@ -5,7 +5,7 @@ export const SaveProgramme = (props) => {
   return (
     <main>
       <FirstModal show={props.show} close={props.close}>
-        <SAVEPROGRAMMEFORM />
+        <SAVEPROGRAMMEFORM onclose={props.onclose} />
       </FirstModal>
     </main>
   );

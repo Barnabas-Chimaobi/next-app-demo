@@ -90,7 +90,9 @@ const items = [
   {
     label: (
       <Link href="#" style={{ fontSize: "12px", color: "#FFFFFF" }}>
-        <Text style={{ color: "white" }}>Admin Setting</Text>
+        {/* <Text style={{ color: "white" }}> */}
+        Admin Setting
+        {/* </Text> */}
       </Link>
     ),
     icon: <HomeOutlined width={25} height={19.44} />,
@@ -100,17 +102,22 @@ const items = [
       <Link
         href="#"
         color="white"
-        style={{ fontSize: "12px", color: "#FFFFFF" }}
-      >
-        <Text style={{ color: "white" }}>Admission</Text>
+        style={{ fontSize: "12px", color: "#FFFFFF" }}>
+        {/* <Text style={{ color: "white" }}> */}
+        Admission
+        {/* </Text> */}
       </Link>
     ),
     icon: <UserOutlined width={25} height={19.44} />,
   },
   {
     label: (
-      <Link href="#" style={{ fontSize: "12px", color: "#FFFFFF" }}>
-        <Text style={{ color: "white" }}>Reports</Text>
+      <Link
+        href="/admin/reportSetup"
+        style={{ fontSize: "12px", color: "#FFFFFF" }}>
+        {/* <Text style={{ color: "white" }}> */}
+        Report Setup
+        {/* </Text> */}
       </Link>
     ),
     icon: <TeamOutlined width={25} height={19.44} />,
@@ -119,9 +126,10 @@ const items = [
     label: (
       <Link
         href="/admin/schoolSetUp"
-        style={{ fontSize: "12px", color: "#FFFFFF" }}
-      >
-        <Text style={{ color: "white" }}>Setup School</Text>
+        style={{ fontSize: "12px", color: "white" }}>
+        {/* <Text style={{ color: "white" }}> */}
+        School Setup
+        {/* </Text> */}
       </Link>
     ),
     icon: <FaSchool width={25} height={19.44} />,
@@ -144,8 +152,7 @@ const AdminLayout = ({ children }) => {
         {
           // minHeight: "100vh",
         }
-      }
-    >
+      }>
       <Sider
         className="side-menu"
         style={{
@@ -159,8 +166,7 @@ const AdminLayout = ({ children }) => {
         collapsedWidth={0}
         collapsed={collapsed}
         width="230px"
-        onCollapse={(value) => setCollapsed(value)}
-      >
+        onCollapse={(value) => setCollapsed(value)}>
         <div className="container">
           <Space style={{ padding: "12px" }}>
             <img src="../../vector.png" width={22} height={20} />
@@ -197,15 +203,13 @@ const AdminLayout = ({ children }) => {
           style={{
             // margin: "0 16px",
             backgroundColor: colors.ashGrayBg,
-          }}
-        >
+          }}>
           {children}
         </Content>
         <Footer
           style={{
             textAlign: "center",
-          }}
-        >
+          }}>
           Ant Design ©2018 Created by Ant UED
         </Footer>
       </Layout>

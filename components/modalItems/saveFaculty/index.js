@@ -6,7 +6,7 @@ export const SaveFaculty = (props) => {
   return (
     <main>
       <FirstModal show={props.show} close={props.close}>
-        <SaveFacultyForm />
+        <SaveFacultyForm onclose={props.onclose} />
       </FirstModal>
     </main>
   );
