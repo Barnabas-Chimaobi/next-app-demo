@@ -6,7 +6,7 @@ import { Form } from 'react-bootstrap';
 const { Option } = Select;
 
 
-const headers = [
+const tableHead = [
     {
         title:"Name", 
         dataIndex:"name", 
@@ -17,7 +17,7 @@ const headers = [
     {title:"Action", dataIndex:"action", key:"action"}
 ]
 
-const data = [
+const tableData = [
     {
         name: "Ngozi Esther Onyeche",
         status:"HOD",
@@ -118,7 +118,7 @@ export default function index() {
         </div>
         {/* <div className='container bg-white pb-3 mt-4 pt-4'> */}
             {/* <div className='container col-lg-12'> */}
-            <Table rowSelection={rowSelection} columns={headers} dataSource={data} />;
+            <Table rowSelection={rowSelection} columns={tableHead} dataSource={tableData} />;
 
             {/* </div> */}
 

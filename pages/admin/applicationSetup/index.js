@@ -63,6 +63,10 @@ export default function index() {
         console.log(fieldname)
     };
 
+    //query hook
+
+    
+
     const submitFormSetup = async () => {
         console.log( username, password,  'login======')
         const login = await setupForm({variables: {
