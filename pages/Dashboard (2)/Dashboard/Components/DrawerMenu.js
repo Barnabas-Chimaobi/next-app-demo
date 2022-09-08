@@ -1,7 +1,8 @@
-import { Menu, Dropdown } from "antd";
+import { Menu, Dropdown, Typography } from "antd";
 import { UserOutlined } from "@ant-design/icons";
-import { Text } from "@chakra-ui/react";
 import React from "react";
+
+const { Text } = Typography;
 
 export default function DrawerMenu() {
   const items = [

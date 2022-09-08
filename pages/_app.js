@@ -12,6 +12,7 @@ import { client } from "../api";
 import Frontlayout from "../Layouts/FrontLayout/frontlayout";
 import "antd/dist/antd.css"; // or 'antd/dist/antd.less'
 import "../styles/globals.css";
+import "../styles/index.module.css";
 import "@fontsource/inter";
 import "@fontsource/montserrat";
 import NewNav from "../components/newNav";
@@ -60,7 +61,7 @@ function MyApp({ Component, pageProps }) {
       {/* <main>
           {children}
         </main> */}
-  
+
       {/* FOOTER */}
       {/* <footer className="footer py-5">
     <div className="container">

@@ -1,12 +1,12 @@
 import React, { useState } from "react";
-import { Layout, Menu, Drawer } from "antd";
+import { Layout, Menu, Drawer, Typography, Space } from "antd";
 import { AppstoreOutlined } from "@ant-design/icons";
-import { Text, Flex } from "@chakra-ui/react";
 import DrawerMenu from "./Components/DrawerMenu";
 import Navibar from "./Components/navibar";
 import { Container } from "react-bootstrap";
 
 const { Sider, Header, Content } = Layout;
+const { Text } = Typography;
 
 export default function Index() {
   const [collapsed, setCollapsed] = useState(false);
@@ -44,14 +44,14 @@ export default function Index() {
               bottom: 0,
             }}>
             <Container fluid>
-              <Flex
+              <Space
                 alignItems="center"
                 justifyContent="center"
                 gap={2}
                 style={{ backgroundColor: "white" }}>
                 <AppstoreOutlined />
                 <Text>Dashboard</Text>
-              </Flex>
+              </Space>
               <DrawerMenu />
             </Container>
           </Sider>

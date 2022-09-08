@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { gql, useQuery, useMutation, useLazyQuery } from '@apollo/client';
 import { STAFF_LOGIN } from "../api/mutations/authMutation";
 import { useRouter } from "next/router";
@@ -10,33 +10,13 @@ import { Space, Typography, Form, Input } from "antd";
 import Link from "next/link";
 import StudentLottie from "../public/Lottie/StudentLottie.json";
 import { LottiePlayer } from "lottie-web";
-import { GET_ALL_DEPARTMENT, GET_ALL_FACULTY, GET_ALL_PROGRAMME, GET_ALL_SESSION } from "../api/queries/basicQueries";
-import { useDispatch, useSelector } from 'react-redux'
-import store from '../redux/stores'
-import { faculty } from "../redux/reducers";
 const { Text } = Typography;
 
 export default function index() {
-  const dispatch = useDispatch()
   const router = useRouter()
   const  [staffLogin, { loading: loginLoading, error: loginError, data: loginData }] = useMutation(STAFF_LOGIN);
-  const [getAllDepartment, { data: queryDeptData, loading: queryDeptLoading, error: queryDeptError }] = useLazyQuery(GET_ALL_DEPARTMENT);
-  const [getAllProgrammes, { data: queryProgramData, loading: queryProgramLoading, error: queryProgramError }] = useLazyQuery(GET_ALL_PROGRAMME);
-  const [getAllFaculty, { data: queryFacultyData, loading: queryFacultyLoading, error: queryFacultyError }] = useLazyQuery(GET_ALL_FACULTY);
-  const [getAllSession, { data: querySessionData, loading: querySessionLoading, error: querySessionError }] = useLazyQuery(GET_ALL_SESSION);
-
   const  [username, setUsername] = useState('')
   const   [password, setPassword] = useState('')
-
-  const getSchoolParams = async () => {
-   const dept = await getAllDepartment()
-   const facul = await getAllFaculty()
-   const prog = await getAllProgrammes()
-   const session = await getAllSession()
-
-   console.log(dept, prog, facul?.data?.allFaculty, session, 'allparamssss===')
-      dispatch(faculty(facul?.data?.allFaculty))
-  }
 
   const loginStaff = async () => {
     console.log( username, password,  'login======')
@@ -44,9 +24,6 @@ export default function index() {
       username: username,
       password: password
     }})
-    localStorage.setItem('token', login.data.staffLogin.authToken)
-    // console.log(login.data.staffLogin.authToken, "parameterslogins====")
-
   }
   
   if(loginError){console.log(loginError, 'errooorrsss====')}
@@ -55,11 +32,6 @@ export default function index() {
     router.push('./admin/applicationSetup')
     console.log(loginData, 'logindataaaaass====')
   }
-
-  useEffect(() => {
-    if(queryFacultyData){console.log(queryFacultyData, 'loginloadinggsss====')}
-    getSchoolParams()
-  }, [])
 
 
   {/* <form action="">

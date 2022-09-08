@@ -10,7 +10,7 @@ export default function Admission() {
     <div>
       <Frontlayout>
         <div
-          className="d-block d-lg-flex container mt-3 mb-3"
+          className="d-block d-lg-flex container mt-5 mb-3"
           style={{ gap: 20 }}>
           {/* <Row> */}
           {/* <Col lg={6} sm={6}> */}
