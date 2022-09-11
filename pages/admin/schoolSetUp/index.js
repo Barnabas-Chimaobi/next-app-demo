@@ -77,7 +77,8 @@ export default function Index() {
                     lineHeight: "25px",
 
                     color: "#FFFFFF",
-                  }}>
+                  }}
+                >
                   Save Department
                 </Text>
               </ModalCard>
@@ -99,7 +100,8 @@ export default function Index() {
                     lineHeight: "25px",
 
                     color: "#FFFFFF",
-                  }}>
+                  }}
+                >
                   Save Faculty
                 </Text>
               </ModalCard>
@@ -121,7 +123,8 @@ export default function Index() {
                     lineHeight: "25px",
 
                     color: "#FFFFFF",
-                  }}>
+                  }}
+                >
                   Save Programme
                 </Text>
               </ModalCard>
@@ -143,7 +146,8 @@ export default function Index() {
                     lineHeight: "25px",
 
                     color: "#FFFFFF",
-                  }}>
+                  }}
+                >
                   Save Session
                 </Text>
               </ModalCard>

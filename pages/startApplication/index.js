@@ -1,8 +1,6 @@
 import Head from "next/head";
 import link from "next/link";
 import Image from "next/image";
-// import styles from "../styles/index.module.css";
-// import { Navbar } from "../components/nav";
 import { GENERATE_APPLICATION_INVOICE } from "../../api/mutations/adminMutation/index";
 import { useState } from "react";
 import { gql, useQuery, useMutation, useLazyQuery } from "@apollo/client";
