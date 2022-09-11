@@ -12,6 +12,9 @@ export default function SaveFacultyForm(props) {
     saveFaculty,
     { loading: facultyLoading, error: facultyError, data: facultyData },
   ] = useMutation(SAVE_FACULTY);
+
+
+  
   const [facultyName, setFacultyName] = useState("");
   const [descriptions, setDescription] = useState("");
   const [closeOnSubmit, setCloseOnSubmit] = useState(false);
