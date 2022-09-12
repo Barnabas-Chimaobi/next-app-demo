@@ -60,6 +60,7 @@ export default function form() {
   const getInput = (text) => {
     setgroupName(text);
   };
+
   return (
     <Frontlayout>
       <div>
