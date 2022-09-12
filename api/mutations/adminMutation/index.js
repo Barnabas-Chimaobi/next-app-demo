@@ -219,8 +219,8 @@ export const UPDATE_DEPARTMENT = gql`
   }
 `;
 export const SAVE_DYNAMIC_FORM_SETUP = gql`
-  mutation saveDynamicFormSetup($model: ApplicationFormDynamicSetupDtoInput!) {
-    saveDynamicFormSetup(model: $model) {
+  mutation saveDynamicFormSetUp($model: ApplicationFormDynamicSetupDtoInput!) {
+    saveDynamicFormSetUp(model: $model) {
       active
       createdOn
     }

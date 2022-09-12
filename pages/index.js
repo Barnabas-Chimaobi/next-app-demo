@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { gql, useQuery, useMutation, useLazyQuery } from '@apollo/client';
 import { STAFF_LOGIN } from "../api/mutations/authMutation";
 import { useRouter } from "next/router";
@@ -10,11 +10,19 @@ import { Space, Typography, Form, Input } from "antd";
 import Link from "next/link";
 import StudentLottie from "../public/Lottie/StudentLottie.json";
 import { LottiePlayer } from "lottie-web";
+import { GET_ALL_DEPARTMENT, GET_ALL_FACULTY, GET_ALL_PROGRAMME, GET_ALL_SESSION } from "../api/queries/basicQueries";
+import { useDispatch } from "react-redux";
+import { department, faculty, programme, session, userDetails } from "../redux/reducers";
 const { Text } = Typography;
 
 export default function index() {
+  const dispatch = useDispatch()
   const router = useRouter()
   const  [staffLogin, { loading: loginLoading, error: loginError, data: loginData }] = useMutation(STAFF_LOGIN);
+  const  [getFaculty, { loading: facultyLoading, error: facultyError, data: facultyData }] = useLazyQuery(GET_ALL_FACULTY);
+  const  [getDepartment, { loading: deptLoading, error: deptError, data: deptData }] = useLazyQuery(GET_ALL_DEPARTMENT);
+  const  [getProgramme, { loading: progLoading, error: progError, data: progData }] = useLazyQuery(GET_ALL_PROGRAMME);
+  const  [getSession, { loading: sessLoading, error: sessError, data: sessData }] = useLazyQuery(GET_ALL_SESSION);
   const  [username, setUsername] = useState('')
   const   [password, setPassword] = useState('')
 
@@ -24,15 +32,33 @@ export default function index() {
       username: username,
       password: password
     }})
+    dispatch(userDetails(login?.data?.staffLogin))
+    // localStorage.setItem('user', login?.data?.staffLogin,)
+    console.log(login?.data?.staffLogin,  'login====to the dispatch==')
+  }
+  const getAllForSetUp = async () => {
+    const falc = await getFaculty()
+    const dept = await getDepartment()
+    const prog = await getProgramme()
+    const sess = await getSession()
+    dispatch(faculty(falc?.data?.allFaculty))
+    dispatch(department(dept?.data?.allDepartment))
+    dispatch(session(sess?.data?.allSession))
+    dispatch(programme(prog?.data?.allProgramme))
+    console.log(prog?.data?.allProgramme, sess?.data?.allSession, 'allparammeteresss=========')
   }
   
   if(loginError){console.log(loginError, 'errooorrsss====')}
   if(loginLoading){console.log(loginLoading, 'loginloadinggsss====')}
+
   if(loginData){
     router.push('./admin/applicationSetup')
     console.log(loginData, 'logindataaaaass====')
   }
 
+  useEffect(() => {
+     getAllForSetUp()
+  }, [])
 
   {/* <form action="">
 <div className="input-group input-group-lg mb-3">

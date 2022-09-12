@@ -2,10 +2,10 @@ import { createSlice } from "@reduxjs/toolkit";
 
 
 const initialState = {
-  faculty: [],
   department: [],
   session: [],
-  programme: []
+  programme: [],
+  faculty: [],
 }
 
 
@@ -13,14 +13,6 @@ const schoolSetupSlice = createSlice({
   name : "schoolSetup",
   initialState,
   reducers: {
-    faculty: (state, {payload}) => {
-      state.faculty = payload
-      return state
-    },
-    department: (state, {payload}) => {
-        state.department = payload
-        return state
-      },
     session: (state, {payload}) => {
       state.session = payload
       return state
@@ -29,6 +21,14 @@ const schoolSetupSlice = createSlice({
       state.programme = payload
       return state
     },
+    faculty: (state, {payload}) => {
+      state.faculty = payload
+      return state
+    },
+    department: (state, {payload}) => {
+        state.department = payload
+        return state
+      },
     // resetUserDetails: (state) => initialState,
   }
 })

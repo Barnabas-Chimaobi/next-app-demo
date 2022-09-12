@@ -77,14 +77,11 @@ export default function SaveSessionForm(props) {
               }}>
               Name
             </Text>
-            <Form.Select
+            <Form.Control
+              type="text"
               className="form-control"
-              onChange={(e) => setName(e.target.value)}>
-              <option selected>-- SELECT SESSION NAME-- </option>
-              <option>TEXT</option>
-              <option>EMAIL</option>
-              <option>PASSWORD</option>
-            </Form.Select>
+              placeholder="Session"
+              onChange={(e) => setName(e.target.value)}/>
           </Col>
 
           <Col lg={9} xl={6} sm={6} style={{ marginBottom: "34px" }}>

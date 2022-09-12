@@ -30,7 +30,9 @@ export const GET_ALL_SESSION = gql`
      allSession {
         id,
          name,
-         slug
+         slug,
+         startDate,
+         endDate
      }
  }
 `
