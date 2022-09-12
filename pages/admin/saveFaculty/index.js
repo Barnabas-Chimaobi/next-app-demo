@@ -12,6 +12,9 @@ export default function SaveFacultyForm(props) {
     saveFaculty,
     { loading: facultyLoading, error: facultyError, data: facultyData },
   ] = useMutation(SAVE_FACULTY);
+
+
+  
   const [facultyName, setFacultyName] = useState("");
   const [descriptions, setDescription] = useState("");
   const [closeOnSubmit, setCloseOnSubmit] = useState(false);
@@ -53,7 +56,7 @@ export default function SaveFacultyForm(props) {
           border: "none",
           padding: "74px 54px",
         }}>
-        <h3>Save Faculty</h3>
+        
         <Row>
           <Col lg={6} xl={6} sm={6} style={{ marginBottom: "34px" }}>
             <Text
@@ -63,9 +66,7 @@ export default function SaveFacultyForm(props) {
                 fontWeight: 400,
                 fontSize: "14px",
                 lineHeight: "17px",
-
                 textTransform: "capitalize",
-
                 color: "#3E4851",
               }}>
               Name
@@ -76,6 +77,7 @@ export default function SaveFacultyForm(props) {
                 setFacultyName(name.target.value);
               }}
               className="form-control"
+              placeholder="Faculty Name"
             />
             {/* <option selected>-- SELECT FACULTY NAME-- </option>
               <option>TEXT</option>
@@ -91,9 +93,7 @@ export default function SaveFacultyForm(props) {
                 fontWeight: 400,
                 fontSize: "14px",
                 lineHeight: "17px",
-
                 textTransform: "capitalize",
-
                 color: "#3E4851",
               }}>
               Description
@@ -115,7 +115,24 @@ export default function SaveFacultyForm(props) {
             alignItems: "flex-end",
           }}>
           <Button
-            onClick={() => submitFaculty()}
+            style={{ borderRadius: "5px" }}
+            type="primary"
+            danger>
+            <Text
+              style={{
+                fontFamily: "Gilroy-Medium",
+                fontStyle: "normal",
+                fontWeight: 400,
+                fontSize: "16px",
+                lineHeight: "19px",
+                textTransform: "capitalize",
+                color: "#FFFFFF",
+              }}>
+              Cancel
+            </Text>
+          </Button>
+          <Button
+            onClick={submitFaculty}
             style={{ background: "#047735", borderRadius: "5px" }}>
             <Text
               style={{
@@ -125,7 +142,6 @@ export default function SaveFacultyForm(props) {
                 fontSize: "16px",
                 lineHeight: "19px",
                 textTransform: "capitalize",
-
                 color: "#FFFFFF",
               }}>
               Submit
@@ -135,5 +151,5 @@ export default function SaveFacultyForm(props) {
       </Card>
     </div>
     // </Frontlayout>
-  );
+  )
 }

@@ -46,7 +46,7 @@ export default function SAVEPROGRAMMEFORM(props) {
           border: "none",
           padding: "74px 54px",
         }}>
-        <h3>Save Programme</h3>
+        
         <Row>
           <Col lg={6} xl={6} sm={6} style={{ marginBottom: "34px" }}>
             <Text
@@ -63,7 +63,7 @@ export default function SAVEPROGRAMMEFORM(props) {
               }}>
               Name
             </Text>
-            <Form.Control type="text" className="form-control" />
+            <Form.Control type="text" className="form-control" onChange={(e) => setProgrammeName(e.target.value)} />
             {/* <option selected>-- SELECT PROGRAMME NAME-- </option>
               <option>TEXT</option>
               <option>EMAIL</option>
@@ -89,6 +89,7 @@ export default function SAVEPROGRAMMEFORM(props) {
               as="textarea"
               placeholder="ADD DESCRIPTION"
               className="pt-4 pb-4"
+              onChange={(e) => setDescription(e.target.value)}
             />
           </Col>
         </Row>
@@ -98,6 +99,23 @@ export default function SAVEPROGRAMMEFORM(props) {
             justifyContent: "flex-end",
             alignItems: "flex-end",
           }}>
+          <Button
+            style={{ borderRadius: "5px" }}
+            type="primary"
+            danger>
+            <Text
+              style={{
+                fontFamily: "Gilroy-Medium",
+                fontStyle: "normal",
+                fontWeight: 400,
+                fontSize: "16px",
+                lineHeight: "19px",
+                textTransform: "capitalize",
+                color: "#FFFFFF",
+              }}>
+              Cancel
+            </Text>
+          </Button>  
           <Button
             onClick={() => submitProgramme()}
             style={{ background: "#047735", borderRadius: "5px" }}>

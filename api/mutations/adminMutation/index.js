@@ -218,6 +218,11 @@ export const UPDATE_DEPARTMENT = gql`
     }
   }
 `;
+// export const UPDATE_FACULTY = gql`
+//   mutation updateFaculty(
+    
+//   )
+// `
 export const SAVE_DYNAMIC_FORM_SETUP = gql`
   mutation saveDynamicFormSetUp($model: ApplicationFormDynamicSetupDtoInput!) {
     saveDynamicFormSetUp(model: $model) {
