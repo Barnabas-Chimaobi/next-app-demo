@@ -5,7 +5,7 @@ import { gql, useQuery, useMutation, useLazyQuery } from "@apollo/client";
 import { SUBMIT_APPLICATION_FORM } from "../../api/mutations/adminMutation/index";
 
 export default function form() {
-  const [appForm, { loading: formLoading, error: fromError, data: formData }] =
+  const [appForm, { loading: formLoading, error: formError, data: formData }] =
     useMutation(SUBMIT_APPLICATION_FORM);
   const [groupName, setgroupName] = useState("");
   const [key, setKey] = useState("");
