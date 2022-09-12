@@ -51,7 +51,8 @@ export default function SaveDepartmentForm(props) {
           borderRadius: "10px",
           border: "none",
           padding: "74px 54px",
-        }}>
+        }}
+      >
         <h3>Save Department</h3>
         <Row>
           <Col lg={6} xl={6} sm={6} style={{ marginBottom: "34px" }}>
@@ -66,7 +67,8 @@ export default function SaveDepartmentForm(props) {
                 textTransform: "capitalize",
 
                 color: "#3E4851",
-              }}>
+              }}
+            >
               Name
             </Text>
             <Form.Control
@@ -94,7 +96,8 @@ export default function SaveDepartmentForm(props) {
                 textTransform: "capitalize",
 
                 color: "#3E4851",
-              }}>
+              }}
+            >
               Department Code
             </Text>
             <Form.Control
@@ -122,7 +125,8 @@ export default function SaveDepartmentForm(props) {
                 textTransform: "capitalize",
 
                 color: "#3E4851",
-              }}>
+              }}
+            >
               Faculty
             </Text>
             <Form.Select
@@ -130,7 +134,8 @@ export default function SaveDepartmentForm(props) {
               onChange={(name) => {
                 setDeptName(name.target.value);
               }}
-              className="form-control">
+              className="form-control"
+            >
               <option selected>-- SELECT Faculty NAME-- </option>
               <option>TEXT</option>
               <option>EMAIL</option>
@@ -143,10 +148,12 @@ export default function SaveDepartmentForm(props) {
             display: "flex",
             justifyContent: "flex-end",
             alignItems: "flex-end",
-          }}>
+          }}
+        >
           <Button
             onClick={() => submitDepartment()}
-            style={{ background: "#047735", borderRadius: "5px" }}>
+            style={{ background: "#047735", borderRadius: "5px" }}
+          >
             <Text
               style={{
                 fontFamily: "Gilroy-Medium",
@@ -157,7 +164,8 @@ export default function SaveDepartmentForm(props) {
                 textTransform: "capitalize",
 
                 color: "#FFFFFF",
-              }}>
+              }}
+            >
               Submit
             </Text>
           </Button>
