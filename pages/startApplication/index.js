@@ -1,8 +1,6 @@
 import Head from "next/head";
 import link from "next/link";
 import Image from "next/image";
-// import styles from "../styles/index.module.css";
-// import { Navbar } from "../components/nav";
 import { GENERATE_APPLICATION_INVOICE } from "../../api/mutations/adminMutation/index";
 import { useState } from "react";
 import { gql, useQuery, useMutation, useLazyQuery } from "@apollo/client";
@@ -14,19 +12,16 @@ export default function Home() {
   const [departmentId, setDepartmentId] = useState();
   const [firstName, setfirstName] = useState("");
   const [Surname, setSurname] = useState("");
-  const [biodata, setBiodata] = useState({
-    key: "",
-    name: firstName + "" + Surname,
-  });
-
+  const [key, setKey] = useState();
+  const name = firstName + Surname;
   const AppStartSubmit = async () => {
     const start = await appStart({
       variables: {
-        programmeId,
-        departmentId,
+        programmeId: programmeId,
+        departmentId: departmentId,
         biodata: {
-          key: biodata.key,
-          name: biodata.name,
+          key: key,
+          name: name,
         },
       },
     });
